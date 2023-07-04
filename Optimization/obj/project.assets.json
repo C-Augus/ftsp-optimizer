@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Gurobi.Optimizer/10.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/gurobi100.netstandard20.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/gurobi100.netstandard20.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/Gurobi.Optimizer.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libgurobi100.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libgurobi100.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libgurobi100.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libgurobi100.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/gurobi100.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gurobi.Optimizer/10.0.2": {
+      "sha512": "MfhRFJAikJIC+2zDJsKMd9Wg7/5zLIoPvuQGdeXSIblSbfAN4IhheCW+fbrXAISNjfhkJOEYSGhYyvKlHnyERA==",
+      "type": "package",
+      "path": "gurobi.optimizer/10.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Gurobi.Optimizer.targets",
+        "content/logo-final.png",
+        "docs/readme.md",
+        "gurobi.optimizer.10.0.2.nupkg.sha512",
+        "gurobi.optimizer.nuspec",
+        "lib/netstandard2.0/gurobi100.netstandard20.dll",
+        "lib/netstandard2.0/gurobi100.netstandard20.xml",
+        "runtimes/linux-arm64/native/libgurobi100.so",
+        "runtimes/linux-x64/native/libgurobi100.so",
+        "runtimes/osx-arm64/native/libgurobi100.dylib",
+        "runtimes/osx-x64/native/libgurobi100.dylib",
+        "runtimes/win-x64/native/gurobi100.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Gurobi.Optimizer >= 10.0.2"
+    ]
+  },
+  "packageFolders": {
+    "/home/ciro/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/ciro/Documents/ftsp-optimizer/Optimization/Optimizer.csproj",
+      "projectName": "Optimizer",
+      "projectPath": "/home/ciro/Documents/ftsp-optimizer/Optimization/Optimizer.csproj",
+      "packagesPath": "/home/ciro/.nuget/packages/",
+      "outputPath": "/home/ciro/Documents/ftsp-optimizer/Optimization/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/ciro/Documents/ftsp-optimizer/Optimization/NuGet.config",
+        "/home/ciro/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "Gurobi.Optimizer": {
+            "target": "Package",
+            "version": "[10.0.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
