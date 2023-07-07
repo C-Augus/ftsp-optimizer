@@ -4,7 +4,7 @@ namespace Optimizer.Utils
 {
     public class Instance 
     {
-        public static TSPInstance ReadInstFromFile(/*string filePath*/)
+        public static TSPInstance ReadInstanceFromFile(/*string filePath*/)
         {
             // string sourceFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1.txt";
             // string targetFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1_out.txt";
