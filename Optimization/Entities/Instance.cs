@@ -1,4 +1,4 @@
-namespace Optimization.Entities {
+namespace Optimizer.Entities {
     public class TSPInstance {
         public int NumberOfNodes { get; }
         public int NumberOfFamilies { get; }

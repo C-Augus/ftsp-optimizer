@@ -1,6 +1,6 @@
-using Optimization.Entities;
+using Optimizer.Entities;
 
-namespace Optimization.Utils
+namespace Optimizer.Utils
 {
     public class Instance 
     {

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Public\" />
+    <Folder Include="Data\Cache\" />
   </ItemGroup>
 
 </Project>
