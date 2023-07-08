@@ -8,13 +8,9 @@ namespace Optimizer.Utils
         {
             // string sourceFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1.txt";
             // string targetFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1_out.txt";
-            string sourceFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Public/Instances/d198.sftsp_198_29_1.txt";
-            string targetFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Public/Instances/d198.sftsp_198_29_1.txt_out.txt";
+            string sourceFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Instances/d198.sftsp_198_29_1.txt";
+            // string targetFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Instances/d198.sftsp_198_29_1.txt_out.txt";
             string[] lines = File.ReadAllLines(sourceFilePath);
-
-            string sourceFolderPath = Path.GetDirectoryName(sourceFilePath);
-            //string targetFolderPath = sourceFolderPath + @"\out";
-            //string targetFilePath = targetFolderPath + @"\summary.csv";
 
             //Directory.CreateDirectory(targetFolderPath);
 
@@ -50,15 +46,6 @@ namespace Optimizer.Utils
                 numberOfNodes
             );
 
-            using (StreamWriter sw = File.AppendText(targetFilePath))
-            {
-                sw.WriteLine(instance.NumberOfNodes.ToString() + ' ' + instance.NumberOfFamilies.ToString() + ' ' + instance.NumberOfVisits.ToString());
-                string ArrayString = string.Join(" ", instance.ArrayOfFamilies);
-                sw.WriteLine(ArrayString);
-                ArrayString = string.Join(" ", instance.ArrayOfVisits);
-                sw.WriteLine(ArrayString);
-            }
-
             for (int i = 3; i < numberOfNodes + 3; i++)
             {
                 string[] line = lines[i].Split(' ');
@@ -68,28 +55,37 @@ namespace Optimizer.Utils
                 }
             }
 
-            using (StreamWriter sw = File.AppendText(targetFilePath))
-            {
-                for (int i = 0; i < numberOfNodes; i++)
-                {
-                    string ArrayString = string.Join(" ", GetRow(instance.DistancesMatrix, i, numberOfNodes));
-                    sw.WriteLine(ArrayString);
-                }
-            }
-
             return instance;
+
+            // using (StreamWriter sw = File.AppendText(targetFilePath))
+            // {
+            //     sw.WriteLine(instance.NumberOfNodes.ToString() + ' ' + instance.NumberOfFamilies.ToString() + ' ' + instance.NumberOfVisits.ToString());
+            //     string ArrayString = string.Join(" ", instance.ArrayOfFamilies);
+            //     sw.WriteLine(ArrayString);
+            //     ArrayString = string.Join(" ", instance.ArrayOfVisits);
+            //     sw.WriteLine(ArrayString);
+            // }
+
+            // using (StreamWriter sw = File.AppendText(targetFilePath))
+            // {
+            //     for (int i = 0; i < numberOfNodes; i++)
+            //     {
+            //         string ArrayString = string.Join(" ", GetRow(instance.DistancesMatrix, i, numberOfNodes));
+            //         sw.WriteLine(ArrayString);
+            //     }
+            // }
         }
 
-        static int[] GetRow(int[,] matrix, int row, int columns)
-        {
-            int[] rowArray = new int[columns];
+        // static int[] GetRow(int[,] matrix, int row, int columns)
+        // {
+        //     int[] rowArray = new int[columns];
 
-            for (int i = 0; i < columns; i++)
-            {
-                rowArray[i] = matrix[row, i];
-            }
+        //     for (int i = 0; i < columns; i++)
+        //     {
+        //         rowArray[i] = matrix[row, i];
+        //     }
 
-            return rowArray;
-        }
+        //     return rowArray;
+        // }
     }
 }

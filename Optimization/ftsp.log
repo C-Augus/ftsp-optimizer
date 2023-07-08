@@ -1,0 +1,171 @@
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:12:50 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38644 rows, 39203 columns and 231378 nonzeros
+Model fingerprint: 0xe6cb9a90
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 30 rows and 38904 columns
+Presolve time: 0.80s
+
+Explored 0 nodes (0 simplex iterations) in 1.04 seconds (0.45 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:15:36 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 424 rows, 39203 columns and 116718 nonzeros
+Model fingerprint: 0xd805fb96
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 8e+00]
+Presolve removed 30 rows and 39100 columns
+Presolve time: 0.15s
+
+Explored 0 nodes (0 simplex iterations) in 0.25 seconds (0.07 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:16:15 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 395 rows, 39006 columns and 116624 nonzeros
+Model fingerprint: 0xad66e4ad
+Variable types: 0 continuous, 39006 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 0 rows and 38810 columns
+Presolve time: 0.13s
+
+Explored 0 nodes (0 simplex iterations) in 0.15 seconds (0.05 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+No other solutions better than -1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:16:31 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 198 rows, 39006 columns and 39203 nonzeros
+Model fingerprint: 0x526a500a
+Variable types: 0 continuous, 39006 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 4036.0000000
+Presolve removed 198 rows and 39006 columns
+Presolve time: 0.05s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.08 seconds (0.01 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 2: 563937 4036 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.639370000000e+05, best bound 5.639370000000e+05, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:16:52 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 227 rows, 39006 columns and 39297 nonzeros
+Model fingerprint: 0xcb230725
+Variable types: 0 continuous, 39006 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+00]
+Found heuristic solution: objective 177747.00000
+Presolve removed 227 rows and 39006 columns
+Presolve time: 0.04s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.01 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 2: 563937 177747 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.639370000000e+05, best bound 5.639370000000e+05, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:17:33 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38447 rows, 39203 columns and 153957 nonzeros
+Model fingerprint: 0x372174f5
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 177747.00000
+Presolve removed 38447 rows and 39203 columns
+Presolve time: 0.24s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.26 seconds (0.09 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 2: 563937 177747 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.639370000000e+05, best bound 5.639370000000e+05, gap 0.0000%

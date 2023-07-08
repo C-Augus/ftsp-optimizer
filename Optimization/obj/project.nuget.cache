@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FK8vtRbhN88KedkIbohYcOQ5cvNU7ryW7tjLAI+gww91LVl+oePEJ1XiWfmskkiY5bqrhtoQL9AniaeHyRJwFg==",
+  "dgSpecHash": "qLMhm4ZW+Tn4/CxoG0/9lHajMIUMHNPZHetY7MFCCWJxBIi1QW7y8z8nofHgb03LYv9UXT4VaYYNDmdoTcYLug==",
   "success": true,
-  "projectFilePath": "C:\\code\\ftsp-optimizer\\Optimization\\Optimizer.csproj",
+  "projectFilePath": "/home/ciro/Documents/ftsp-optimizer/Optimization/Optimizer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ciroe\\.nuget\\packages\\gurobi.optimizer\\10.0.2\\gurobi.optimizer.10.0.2.nupkg.sha512"
+    "/home/ciro/.nuget/packages/gurobi.optimizer/10.0.2/gurobi.optimizer.10.0.2.nupkg.sha512"
   ],
   "logs": []
 }
