@@ -1,5 +1,4 @@
-﻿using Gurobi;
-using Optimizer.Model;
+﻿using Optimizer.Model;
 
 namespace Optimizer.main
 {
@@ -7,14 +6,7 @@ namespace Optimizer.main
     {
         static void Main(string[] args)
         {
-            try
-            {   
-                GurobiModel.ExecuteGurobiModel();
-            }
-            catch (GRBException e)
-            {
-                Console.WriteLine("Error code: " + e.ErrorCode + ". " + e.Message);
-            }
+            GurobiModel.ExecuteGurobiModel();
         }
     }
 }
