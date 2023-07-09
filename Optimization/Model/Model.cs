@@ -35,7 +35,6 @@ namespace Optimizer.Model
                 model.Optimize();
 
                 Console.WriteLine("Obj: " + model.ObjVal);
-                Console.WriteLine(model.Get(GRB.IntAttr.PresolveStatus));
 
                 model.Dispose();
                 env.Dispose();

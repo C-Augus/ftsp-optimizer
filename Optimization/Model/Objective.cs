@@ -18,7 +18,7 @@ namespace Optimizer.Model {
                 }
             }
 
-            model.SetObjective(objective, GRB.MAXIMIZE);
+            model.SetObjective(objective, GRB.MINIMIZE);
         }
     }
 }

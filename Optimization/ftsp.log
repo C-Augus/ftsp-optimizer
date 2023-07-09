@@ -169,3 +169,283 @@ Solution count 2: 563937 177747
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 5.639370000000e+05, best bound 5.639370000000e+05, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:53:19 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38644 rows, 39203 columns and 231378 nonzeros
+Model fingerprint: 0xd50f1999
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 30 rows and 38904 columns
+Presolve time: 0.38s
+
+Explored 0 nodes (0 simplex iterations) in 0.44 seconds (0.45 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat Jul  8 19:53:54 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38447 rows, 39203 columns and 153957 nonzeros
+Model fingerprint: 0xec2155c1
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 177747.00000
+Presolve removed 38447 rows and 39203 columns
+Presolve time: 0.09s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.11 seconds (0.03 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 2: 0 177747 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sun Jul  9 10:36:43 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38447 rows, 39203 columns and 153957 nonzeros
+Model fingerprint: 0xec2155c1
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 177747.00000
+Presolve removed 38447 rows and 39203 columns
+Presolve time: 0.26s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.67 seconds (0.03 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 2: 0 177747 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sun Jul  9 10:38:48 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38644 rows, 39203 columns and 231378 nonzeros
+Model fingerprint: 0xd50f1999
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 30 rows and 38904 columns
+Presolve time: 0.32s
+
+Explored 0 nodes (0 simplex iterations) in 0.38 seconds (0.45 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sun Jul  9 10:48:10 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38644 rows, 39203 columns and 231181 nonzeros
+Model fingerprint: 0x92128f25
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 30 rows and 292 columns
+Presolve time: 0.30s
+
+Explored 0 nodes (0 simplex iterations) in 0.44 seconds (0.13 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sun Jul  9 10:48:32 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38447 rows, 39203 columns and 153760 nonzeros
+Model fingerprint: 0x6036ba87
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 177125.00000
+Presolve removed 29718 rows and 30381 columns
+Presolve time: 0.59s
+Presolved: 8729 rows, 8822 columns, 34544 nonzeros
+Found heuristic solution: objective 22723.000000
+Variable types: 0 continuous, 8822 integer (8729 binary)
+
+Root relaxation: objective 4.230469e+03, 179 iterations, 0.02 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 4230.46939    0   42 22723.0000 4230.46939  81.4%     -    0s
+H    0     0                    10048.000000 4230.46939  57.9%     -    0s
+H    0     0                    9315.0000000 4230.46939  54.6%     -    1s
+     0     0 4595.52041    0   72 9315.00000 4595.52041  50.7%     -    1s
+H    0     0                    5798.0000000 4595.52041  20.7%     -    1s
+     0     0 4650.37755    0  100 5798.00000 4650.37755  19.8%     -    1s
+     0     0 4650.37755    0   99 5798.00000 4650.37755  19.8%     -    1s
+     0     0 4687.15306    0  104 5798.00000 4687.15306  19.2%     -    1s
+     0     0 4687.15306    0   98 5798.00000 4687.15306  19.2%     -    1s
+     0     0 4702.00000    0  123 5798.00000 4702.00000  18.9%     -    2s
+H    0     0                    5783.0000000 4702.00000  18.7%     -    2s
+     0     0 4702.00000    0  122 5783.00000 4702.00000  18.7%     -    2s
+     0     0 4702.00000    0  127 5783.00000 4702.00000  18.7%     -    2s
+     0     0 4702.00000    0  128 5783.00000 4702.00000  18.7%     -    2s
+     0     0 4702.00000    0   51 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   64 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   45 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   52 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   44 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   71 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   39 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   40 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   40 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   56 5783.00000 4702.00000  18.7%     -    3s
+     0     0 4702.00000    0   30 5783.00000 4702.00000  18.7%     -    4s
+     0     0 4702.00000    0   64 5783.00000 4702.00000  18.7%     -    4s
+     0     0 4702.00000    0   39 5783.00000 4702.00000  18.7%     -    4s
+     0     0 4702.00000    0   35 5783.00000 4702.00000  18.7%     -    4s
+     0     2 4733.00000    0   33 5783.00000 4733.00000  18.2%     -    5s
+H   29    30                    5490.0000000 4733.00000  13.8%   7.0    5s
+H   30    30                    5480.0000000 4733.00000  13.6%   6.8    5s
+H  516   435                    5443.0000000 4733.00000  13.0%   1.6    7s
+H  699   515                    5387.0000000 4733.00000  12.1%   1.7    7s
+H  742   465                    5368.0000000 4733.00000  11.8%   1.7    7s
+   752   468 5321.00000  113   73 5368.00000 4733.00000  11.8%   1.7   10s
+H  848   505                    5350.0000000 4794.00000  10.4%   4.6   12s
+H  874   500                    5334.0000000 4794.00000  10.1%   4.6   12s
+H  900   492                    5290.0000000 4794.00000  9.38%   4.5   13s
+H  978   512                    5220.0000000 4794.07834  8.16%   4.6   13s
+  1629   829 5037.51282   49   13 5220.00000 4794.16923  8.16%   4.3   15s
+  6082  3307 4897.26993   23   42 5220.00000 4801.56401  8.02%   4.3   20s
+H 7873  3859                    5201.0000000 4804.90155  7.62%   4.7   24s
+  8107  3940 4917.18900   43   29 5201.00000 4804.90155  7.62%   4.7   25s
+ 14040  5316 infeasible   57      5201.00000 4807.17009  7.57%   4.8   30s
+ 19753  6524 5033.46220   47   38 5201.00000 4815.17182  7.42%   4.9   35s
+ 22142  7546 5060.14984   41   35 5201.00000 4818.00000  7.36%   4.9   42s
+ 22161  7559 4950.15775   41   34 5201.00000 4818.00000  7.36%   4.9   45s
+ 22187  7576 4909.46287   45   48 5201.00000 4818.00000  7.36%   4.9   50s
+ 23581  7920 4847.50000   42   47 5201.00000 4818.00000  7.36%   5.1   55s
+ 30579  8819 4935.09326   55   29 5201.00000 4848.03324  6.79%   5.2   60s
+ 37765  8964 infeasible   65      5201.00000 4861.22857  6.53%   5.3   65s
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sun Jul  9 10:51:59 2023
+
+Set parameter LogFile to value "ftsp.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 38644 rows, 39203 columns and 230984 nonzeros
+Model fingerprint: 0x3a00e31e
+Variable types: 0 continuous, 39203 integer (39006 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+01, 4e+03]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 30 rows and 292 columns
+Presolve time: 0.60s
+Presolved: 38614 rows, 38911 columns, 192090 nonzeros
+Variable types: 0 continuous, 38911 integer (38715 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 5.627852e+03, 343 iterations, 0.20 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5627.85204    0  175          - 5627.85204      -     -    2s
+     0     0 6285.08673    0  276          - 6285.08673      -     -    4s
+     0     0 6285.08673    0  241          - 6285.08673      -     -    4s
+     0     0 6363.50000    0  206          - 6363.50000      -     -    4s
+     0     0 6370.75000    0  206          - 6370.75000      -     -    5s
+     0     0 6370.75000    0  206          - 6370.75000      -     -    5s
+     0     0 6371.04989    0  218          - 6371.04989      -     -    5s
+     0     0 6371.04989    0  215          - 6371.04989      -     -    5s
+     0     0 6371.04989    0  211          - 6371.04989      -     -    6s
+     0     0 6371.04989    0  211          - 6371.04989      -     -    6s
+     0     0 6371.04989    0  175          - 6371.04989      -     -    7s
+     0     0 6371.04989    0  187          - 6371.04989      -     -    7s
+     0     0 6371.04989    0  160          - 6371.04989      -     -    8s
+     0     0 6371.04989    0  184          - 6371.04989      -     -    8s
+     0     0 6371.04989    0  186          - 6371.04989      -     -    9s
+     0     0 6371.04989    0  190          - 6371.04989      -     -    9s
+     0     0 6371.04989    0  190          - 6371.04989      -     -   10s
+     0     0 6371.04989    0  175          - 6371.04989      -     -   10s
+     0     0 6371.04989    0  189          - 6371.04989      -     -   10s
+     0     0 6371.04989    0  174          - 6371.04989      -     -   11s
+     0     2 6467.00000    0   96          - 6467.00000      -     -   17s
+    80    85 6837.54989   41  176          - 6467.00000      -   9.5   20s
+   334   344 7107.39541  179  154          - 6467.00000      -   6.3   25s
+   620   640 7556.66327  302  154          - 6467.00000      -   6.2   30s
+   885   914 8981.71088  423  160          - 6467.00000      -   6.8   35s
+  1111  1123 9831.07653  554   84          - 6467.00000      -   7.1   40s
+  1297  1313 9841.99490  669   80          - 6467.00000      -   7.2   45s
+  1572  1590 9881.57653  783   69          - 6467.00000      -   6.8   51s

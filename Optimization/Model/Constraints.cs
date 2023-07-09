@@ -12,19 +12,20 @@ namespace Optimizer.Model {
                 expr.AddTerm(1.0, x[0, j]);
             }
             model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_depot");
-            model.Update();
-            // Constraint 2: if a node i is visited, there must be an arc leaving i
+
+            // Constraint 2: If a node i is visited, there must be an arc leaving i
             for (int i = 0; i < n; i++)
             {
                 expr.Clear();
                 for (int j = 0; j < n; j++)
                 {
-                    expr.AddTerm(1.0, x[i, j]);
+                    if (i != j)
+                        expr.AddTerm(1.0, x[i, j]);
                 }
                 model.AddConstr(expr, GRB.EQUAL, y[i], "arc_leaves_node_" + i+1);
             }
 
-            // Constraint 3: together with c.1, guarantee there is an arc entering the depot
+            // Constraint 3: Together with c.1, guarantee there is an arc entering the depot
             for (int i = 0; i < n; i++)
             {
                 expr.Clear();
@@ -33,7 +34,7 @@ namespace Optimizer.Model {
                     expr.AddTerm(1.0, x[i, j]);
                     expr.AddTerm(-1.0, x[j, i]);
                 }
-                model.AddConstr(expr, GRB.EQUAL, y[i], "arc_entering_depot_" + i+1);
+                model.AddConstr(expr, GRB.EQUAL, 0.0, "arc_entering_depot_" + i+1);
             }
 
             // Constraint 4: guarantees the number of required visits per family

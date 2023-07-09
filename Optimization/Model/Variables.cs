@@ -13,7 +13,6 @@ namespace Optimizer.Model {
             for (int i = 0; i < n; i++)
             {
                 y[i] = model.AddVar(0.0, GRB.INFINITY, 0.0, GRB.BINARY, $"y{i + 1}");
-                z[i] = model.AddVar()
 
                 for (int j = 0; j < n; j++)
                 {
