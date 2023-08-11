@@ -4,22 +4,19 @@ namespace Optimizer.Utils
 {
     public class Instance 
     {
-        public static TSPInstance ReadInstanceFromFile(/*string filePath*/)
+        public static TSPInstance ReadInstanceFromFile(string filePath)
         {
-            // string sourceFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1.txt";
-            // string targetFilePath = @"C:\code\ftsp-optimizer\Optimization\Public\Instances\d198.sftsp_198_29_1_out.txt";
-            string sourceFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Instances/d198.sftsp_198_29_1.txt";
-            // string targetFilePath = @"/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Instances/d198.sftsp_198_29_1.txt_out.txt";
-            string[] lines = File.ReadAllLines(sourceFilePath);
+            string sourceFilePath = filePath;
+            string targetFilePath = filePath + "_out";
 
-            //Directory.CreateDirectory(targetFolderPath);
+            string[] lines = File.ReadAllLines(sourceFilePath);
 
             //Feeding numberOfNodes(|N|), numberOfFamilies(V) and numberOfVisits(L)
             string[] header = lines[0].Split(' ');
 
             int numberOfNodes = int.Parse(header[0]);
-            int numberOfFamilies = int.Parse(header[1]);
-            int numberOfVisits = int.Parse(header[2]);
+            ushort numberOfFamilies = ushort.Parse(header[1]);
+            ushort numberOfVisits = ushort.Parse(header[2]);
 
             //Auxiliar array of the number of nodes of each family
             string[] strFamilies = lines[1].Split(' ');
@@ -35,6 +32,7 @@ namespace Optimizer.Utils
                 intFamilies[i] = int.Parse(strFamilies[i]);
                 intVisits[i] = int.Parse(strVisits[i]);
             }
+
 
             TSPInstance instance = new
             (
@@ -57,13 +55,13 @@ namespace Optimizer.Utils
 
             return instance;
 
-            // using (StreamWriter sw = File.AppendText(targetFilePath))
+            // using (streamwriter sw = file.appendtext(targetfilepath))
             // {
-            //     sw.WriteLine(instance.NumberOfNodes.ToString() + ' ' + instance.NumberOfFamilies.ToString() + ' ' + instance.NumberOfVisits.ToString());
-            //     string ArrayString = string.Join(" ", instance.ArrayOfFamilies);
-            //     sw.WriteLine(ArrayString);
-            //     ArrayString = string.Join(" ", instance.ArrayOfVisits);
-            //     sw.WriteLine(ArrayString);
+            //     sw.writeline(instance.numberofnodes.tostring() + ' ' + instance.numberoffamilies.tostring() + ' ' + instance.numberofvisits.tostring());
+            //     string arraystring = string.join(" ", instance.arrayoffamilies);
+            //     sw.writeline(arraystring);
+            //     arraystring = string.join(" ", instance.arrayofvisits);
+            //     sw.writeline(arraystring);
             // }
 
             // using (StreamWriter sw = File.AppendText(targetFilePath))

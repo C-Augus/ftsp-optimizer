@@ -6,10 +6,12 @@ namespace Optimizer.Model
 {
     public static class GurobiModel
     {
-        public static /*GRBModel*/ void ExecuteGurobiModel()
+        public static void ExecuteGurobiModel(string filePath)
         {
             try
             {
+                TSPInstance instance = Instance.ReadInstanceFromFile(filePath);
+
                 // Create new Gurobi environment
                 GRBEnv env = new(true);
                 env.Set("LogFile", "ftsp.log");
@@ -18,7 +20,6 @@ namespace Optimizer.Model
                 // Create empty model
                 GRBModel model = new(env);
 
-                TSPInstance instance = Instance.ReadInstanceFromFile();
 
                 // Create x binary variable matrix
                 GRBVar[,] x;
