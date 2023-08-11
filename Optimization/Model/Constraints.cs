@@ -37,7 +37,7 @@ namespace Optimizer.Model {
                 model.AddConstr(expr, GRB.EQUAL, 0.0, "arc_entering_depot_" + i+1);
             }
 
-            // Constraint 4: guarantees the number of required visits per family
+            // Constraint 4: Guarantees the number of required visits per family
             int startingPoint = 0;
             for (int l = 0; l < instance.ArrayOfVisits.Length; l++)
             {

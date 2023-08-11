@@ -30,6 +30,8 @@ namespace Optimizer.Model
 
                 GurobiConstraints.SetGurobiConstraints(ref model, ref instance, instance.NumberOfNodes, ref x, ref y);
 
+                model.Parameters.TimeLimit = 6000.00;
+
                 model.Update();
 
                 model.Optimize();
