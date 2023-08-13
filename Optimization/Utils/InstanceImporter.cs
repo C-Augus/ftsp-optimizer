@@ -11,7 +11,7 @@ namespace Optimizer.Utils
 
             TSPInstance instance = new(DateTime.Now);
 
-            Process(ref instance, ref lines);
+            ProcessInstance(ref instance, ref lines);
 
             return instance;
         }

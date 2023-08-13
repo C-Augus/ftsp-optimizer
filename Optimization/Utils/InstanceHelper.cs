@@ -1,4 +1,5 @@
-﻿using Gtk;
+﻿using Gurobi;
+using Optimizer.Delegates;
 using Optimizer.Entities;
 
 namespace Optimizer.Utils
@@ -6,16 +7,15 @@ namespace Optimizer.Utils
     public abstract class InstanceHelper
     {
         // Delegate of method chaining, responsible for processing all methods listed on InstanceHelper in the following order.
-        public delegate void ProcessInstance(ref TSPInstance instance, ref string[] lines);
-        public static ProcessInstance Process =
-            new ProcessInstance(FindFileHeaderValues)
+        public static ProcessInstanceMethods ProcessInstance =
+            new ProcessInstanceMethods(FindFileHeaderValues)
             + FindFamilies
             + FindNodes
             + LinkNodesToFamilies
             + FindFamiliesAndVisits;
 
-        // FindFileHeaderValues is responsible for searching the selected values based on their tags inside a given
-        // file. As each of them is found, it will assign the value to the instance object's respective property.
+        // Searches the selected values based on their tags inside a given file. As each of 
+        // them is found, it will assign the value to the instance object's respective property.
         public static void FindFileHeaderValues(ref TSPInstance instance, ref string[] lines)
         {
             for (int line = 0; line < StringHelper.FindNodesSection(ref lines); line++)
@@ -43,8 +43,8 @@ namespace Optimizer.Utils
             }
         }
 
-        // FindFamilies is responsible for retrieving the familes and their visits required from a given file. As new 
-        // families are identified, it will directly assign a new Family object to the instance's object list of Families.
+        // Retrieves the familes and their visits required from a given file. As new families are identified,
+        // it will directly assign a new Family object to the instance's object list of Families.
         public static void FindFamilies(ref TSPInstance instance, ref string[] lines)
         {
             int familySectionLine = StringHelper.FindFamiliesSection(ref lines);
@@ -52,12 +52,17 @@ namespace Optimizer.Utils
             for (int line = familySectionLine + 2; line < lines.Length - 1; line++)
             {
                 string[] familyStringLine = lines[line].Split(' ');
-                instance.Families.Add(new Family(line - (familySectionLine + 2), int.Parse(familyStringLine[1])));
+                instance.Families.Add(new Family(
+                    line - (familySectionLine + 2), 
+                    int.Parse(familyStringLine[1]), 
+                    int.Parse(familyStringLine[2])
+                    )
+                );
             }
         }
 
-        // FindNodes is responsible for retrieving the nodes from a given file. As new nodes are
-        // identified, it will directly assign a new Node object to the instance's object list of Nodes.
+        // Retrieves the nodes from a given file. As new nodes are identified, it will
+        // directly assign a new Node object to the instance's object list of Nodes.
         public static void FindNodes(ref TSPInstance instance, ref string[] lines)
         {
             int nodeCoordSectionLine = StringHelper.FindNodesSection(ref lines);
@@ -66,13 +71,18 @@ namespace Optimizer.Utils
             for (int line = nodeCoordSectionLine + 1; line < familySectionLine; line++)
             {
                 string[] coordinateStringLine = lines[line].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                instance.Nodes.Add(new Entities.Node(float.Parse(coordinateStringLine[1]), float.Parse(coordinateStringLine[2])));
+                instance.Nodes.Add(new Node(
+                    line - (nodeCoordSectionLine + 1),
+                    float.Parse(coordinateStringLine[1]), 
+                    float.Parse(coordinateStringLine[2])
+                    )
+                );
             }
         }
 
-        // LinkNodesToFamilies is responsible for assigning families to nodes and vice-versa,
-        // as their classes features a list of Nodes and a Family Family property respectively.
-        // Once currentNode hits its family's number of nodes, then the next family should be triggered.
+        // Assigns families to nodes and vice-versa, as their  classes features
+        // a list of Nodes and a Family Family property respectively. Once currentNode 
+        // hits its family's number of nodes, the next family should be triggered.
         public static void LinkNodesToFamilies(ref TSPInstance instance, ref string[] lines)
         {
             int currentFamilyLine = 0;
@@ -90,8 +100,8 @@ namespace Optimizer.Utils
             }
         }
 
-        //FindFamiliesAndVisits is responsible for retrieving two numbers from a given file, which are the
-        //number of families and the number of visits, and assign them respectively to the instance object.
+        // Retrieves two numbers from a given file, which are the number of families and
+        // the number of visits, and assigns them respectively to the instance's object.
         public static void FindFamiliesAndVisits(ref TSPInstance instance, ref string[] lines)
         {
             int firstLineFromFamiliesSection = StringHelper.FindFamiliesSection(ref lines) + 1;
@@ -101,5 +111,10 @@ namespace Optimizer.Utils
             instance.NumberOfFamilies = int.Parse(auxiliaryString[0]);
             instance.NumberOfVisits = int.Parse(auxiliaryString[1]);
         }
+
+        //public static void SetGurobiModel(ref TSPInstance instance, out GRBModel model)
+        //{
+        //    model = new GRBModel
+        //}
     }
 }

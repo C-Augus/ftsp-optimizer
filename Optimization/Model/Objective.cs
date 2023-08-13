@@ -1,24 +1,37 @@
-/*using Gurobi;
+using Gurobi;
 using Optimizer.Entities;
+using Optimizer.Utils;
 
-namespace Optimizer.Model {
-    public static class GurobiObjective  {
-        public static void SetGurobiObjective(ref GRBModel model, ref TSPInstance instance, ref GRBVar[,] decisionVarible)
+namespace Optimizer.Model
+{
+    public static class GurobiObjective
+    {
+        // Defines the model's objective by adding iteratively: Distance between two nodes * Decision variable.
+        // Once done, sets the model objective.
+        //public static void SetGurobiObjective(ref GRBModel model, ref TSPInstance instance, ref GRBVar[,] decisionVarible)
+        //{
+        //    model.Update();
+
+        //    GRBLinExpr objective = new();
+
+        //    for (int i = 0; i < instance.Nodes.Count; i++)
+        //        for (int j = 0; j < instance.Nodes.Count; j++)
+        //            objective.AddTerm(DistanceCalculator.DistanceBetween(instance.Nodes[i], instance.Nodes[j]), decisionVarible[i, j]);
+
+        //    model.SetObjective(objective, GRB.MINIMIZE);
+        //}
+
+        public static void SetGurobiObjective(ref TSPInstance instance)
         {
-            // Setting the objective function
-            model.Update();
+            instance.Model.Update();
 
             GRBLinExpr objective = new();
 
-            for (int i = 0; i < instance.NumberOfNodes; i++)
-            {
-                for (int j = 0; j < instance.NumberOfNodes; j++)
-                {
-                    objective.AddTerm(instance.DistancesMatrix[i, j], decisionVarible[i, j]);
-                }
-            }
+            foreach (Node nodeI in instance.Nodes)
+                foreach (Node nodeJ in instance.Nodes)
+                    objective.AddTerm(DistanceCalculator.DistanceBetween(nodeI, nodeJ), instance.X[nodeI.Id, nodeJ.Id]);
 
-            model.SetObjective(objective, GRB.MINIMIZE);
+            instance.Model.SetObjective(objective, GRB.MINIMIZE);
         }
     }
-}*/
+}

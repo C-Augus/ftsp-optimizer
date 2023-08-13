@@ -1,3 +1,5 @@
+using Gurobi;
+
 namespace Optimizer.Entities {
     public class TSPInstance {
         public string? Name { get; set; }
@@ -11,6 +13,10 @@ namespace Optimizer.Entities {
         public List<Node>? Nodes { get; set; } = new List<Node>();
         public string? Solution { get; set; }
         public DateTime? Date { get; set; }
+        public GRBModel Model { get; set; }
+        public GRBVar[,] X { get; set; }
+        public GRBVar[] Y { get; set; }
+        public GRBVar[] U { get; set; }
         public float? ElapsedTime { get; set; }
         public float? UpperBound { get; set; }
         public float? LowerBound { get; set; }
