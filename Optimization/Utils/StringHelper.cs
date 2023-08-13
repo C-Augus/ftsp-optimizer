@@ -27,5 +27,21 @@ namespace Optimizer.Utils
         {
             return line.Replace(" ", "_");
         }
+
+        public static string[] ReadAllLines(string filePath)
+        {
+            int nonEmptyLines = 0;
+
+            string[] originalLines = File.ReadAllLines(filePath);
+
+            foreach (string line in originalLines) if (!string.IsNullOrWhiteSpace(line)) nonEmptyLines++;
+
+            string[] newLines = new string[nonEmptyLines];
+
+            for (int line = 0; line < nonEmptyLines; line++)
+                newLines[line] = originalLines[line];
+
+            return newLines;
+        }
     }
 }

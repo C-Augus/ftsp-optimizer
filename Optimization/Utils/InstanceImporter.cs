@@ -7,7 +7,7 @@ namespace Optimizer.Utils
     {
         public static TSPInstance ReadInstanceFromFile(string filePath)
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = StringHelper.ReadAllLines(filePath);
 
             TSPInstance instance = new(DateTime.Now);
 

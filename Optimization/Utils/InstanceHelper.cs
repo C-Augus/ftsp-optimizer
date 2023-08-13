@@ -54,8 +54,8 @@ namespace Optimizer.Utils
                 string[] familyStringLine = lines[line].Split(' ');
                 instance.Families.Add(new Family(
                     line - (familySectionLine + 2), 
-                    int.Parse(familyStringLine[1]), 
-                    int.Parse(familyStringLine[2])
+                    int.Parse(familyStringLine[0]), 
+                    int.Parse(familyStringLine[1])
                     )
                 );
             }
