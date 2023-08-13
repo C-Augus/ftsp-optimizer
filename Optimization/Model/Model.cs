@@ -30,15 +30,9 @@ namespace Optimizer.Model
                 instance.Y = y;
                 instance.U = u;
 
-                //GurobiVariables.SetGurobiVariables(ref model, instance.Nodes.Count, out GRBVar[,] x, out GRBVar[] y);
-
                 GurobiVariables.SetGurobiVariables(ref instance);
 
-                //GurobiObjective.SetGurobiObjective(ref model, ref instance, ref x);
-
                 GurobiObjective.SetGurobiObjective(ref instance);
-
-                //GurobiConstraints.SetGurobiConstraints(ref model, ref instance, instance.Nodes.Count, ref x, ref y);
 
                 GurobiConstraints.SetGurobiConstraints(ref instance);
                 
@@ -51,6 +45,7 @@ namespace Optimizer.Model
                 stopwatch.Stop();
 
                 Console.WriteLine("Obj: " + model.ObjVal);
+                Console.WriteLine("Stopwatch: " + stopwatch.Elapsed);
 
                 model.Dispose();
                 env.Dispose();

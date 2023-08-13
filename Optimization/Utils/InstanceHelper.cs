@@ -53,8 +53,7 @@ namespace Optimizer.Utils
             {
                 string[] familyStringLine = lines[line].Split(' ');
                 instance.Families.Add(new Family(
-                    line - (familySectionLine + 2), 
-                    int.Parse(familyStringLine[0]), 
+                    line - (familySectionLine + 2),
                     int.Parse(familyStringLine[1])
                     )
                 );
@@ -90,13 +89,13 @@ namespace Optimizer.Utils
 
             foreach(Family family in instance.Families)
             {
-                for (; currentNode < (family.NumberOfNodes + currentFamilyLine); currentNode++)
+                for (; currentNode < (family.Nodes.Count + currentFamilyLine); currentNode++)
                 {
                     instance.Nodes[currentNode].Family = family;
                     family.Nodes.Add(instance.Nodes[currentNode]);
                 }
 
-                currentFamilyLine += family.NumberOfNodes;
+                currentFamilyLine += family.Nodes.Count;
             }
         }
 
@@ -111,10 +110,5 @@ namespace Optimizer.Utils
             instance.NumberOfFamilies = int.Parse(auxiliaryString[0]);
             instance.NumberOfVisits = int.Parse(auxiliaryString[1]);
         }
-
-        //public static void SetGurobiModel(ref TSPInstance instance, out GRBModel model)
-        //{
-        //    model = new GRBModel
-        //}
     }
 }
