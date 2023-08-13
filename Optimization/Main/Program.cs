@@ -7,7 +7,7 @@ namespace Optimizer.Main
     {
         static void Main(string[] args)
         {
-            string[] tspFiles = Directory.GetFiles(DirectorySelect.SelectDirectory(), "*.tsp");
+            string[] tspFiles = Directory.GetFiles(DirectoryImporter.SelectDirectory(), "*.tsp");
 
             if (tspFiles.Length == 0)
             {
@@ -20,8 +20,6 @@ namespace Optimizer.Main
                 Console.WriteLine($"Executing: {tspFile}");
                 GurobiModel.ExecuteGurobiModel(tspFile);
             }
-
-
         }
     }
 }

@@ -1,4 +1,4 @@
-using Gurobi;
+/*using Gurobi;
 using Optimizer.Entities;
 
 namespace Optimizer.Model {
@@ -76,4 +76,4 @@ namespace Optimizer.Model {
             }
         }
     }
-}
+}*/
