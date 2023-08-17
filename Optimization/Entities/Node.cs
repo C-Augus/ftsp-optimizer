@@ -9,7 +9,7 @@ namespace Optimizer.Entities
 
         public Node(int id, float x, float y)
         {
-            Id = Id;
+            Id = id;
             X = x;
             Y = y;
         }

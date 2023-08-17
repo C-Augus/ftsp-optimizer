@@ -1,0 +1,146 @@
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:44:14 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 32 rows, 224 columns and 1 nonzeros
+Model fingerprint: 0xcf9581d8
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+01, 1e+01]
+  Objective range  [8e+02, 8e+02]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 2e+00]
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:45:54 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 32 rows, 224 columns and 1 nonzeros
+Model fingerprint: 0xcf9581d8
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+01, 1e+01]
+  Objective range  [8e+02, 8e+02]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 2e+00]
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:46:38 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 32 rows, 224 columns and 1 nonzeros
+Model fingerprint: 0xcf9581d8
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+01, 1e+01]
+  Objective range  [8e+02, 8e+02]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 2e+00]
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:53:22 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 32 rows, 224 columns and 560 nonzeros
+Model fingerprint: 0xf6560708
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 2e+00]
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:56:27 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 29 rows, 224 columns and 560 nonzeros
+Model fingerprint: 0xf1e88346
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 70.7460180
+Presolve removed 1 rows and 42 columns
+Presolve time: 0.00s
+Presolved: 28 rows, 182 columns, 364 nonzeros
+Variable types: 0 continuous, 182 integer (182 binary)
+
+Root relaxation: objective 2.667133e+01, 24 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      26.6713268   26.67133  0.00%     -    0s
+
+Explored 1 nodes (24 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 2: 26.6713 70.746 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.667132675551e+01, best bound 2.667132675551e+01, gap 0.0000%

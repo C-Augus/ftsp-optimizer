@@ -44,6 +44,12 @@ namespace Optimizer.Model
                 model.Optimize();
                 stopwatch.Stop();
 
+                foreach (Node nodeI in instance.Nodes)
+                    foreach (Node nodeJ in instance.Nodes)
+                        Console.WriteLine(x[nodeI.Id, nodeJ.Id]);
+
+                //GRBVar.
+                
                 Console.WriteLine("Obj: " + model.ObjVal);
                 Console.WriteLine("Stopwatch: " + stopwatch.Elapsed);
 

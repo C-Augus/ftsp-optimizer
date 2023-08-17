@@ -10,8 +10,9 @@ namespace Optimizer.Model {
             new ConstraintMethods(Constraint1)
             + Constraint2
             + Constraint3
-            + Constraint4
-            + Constraint5;
+            //+ Constraint4
+            //+ Constraint5
+            ;
 
         public static void Constraint1(ref TSPInstance instance)
         {
