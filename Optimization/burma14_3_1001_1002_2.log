@@ -183,3 +183,197 @@ Solution count 2: 26.6713 70.746
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.667132675551e+01, best bound 2.667132675551e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:58:46 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 32 rows, 224 columns and 560 nonzeros
+Model fingerprint: 0xa47d5423
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 4e+00]
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 2 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 04:59:26 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 211 rows, 224 columns and 1106 nonzeros
+Model fingerprint: 0xd8c57cca
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 1 rows and 28 columns
+Presolve time: 0.00s
+Presolved: 210 rows, 196 columns, 910 nonzeros
+Variable types: 0 continuous, 196 integer (182 binary)
+
+Root relaxation: objective 2.692687e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.92687    0   20          -   26.92687      -     -    0s
+     0     0   28.46015    0   28          -   28.46015      -     -    0s
+     0     0   28.51105    0   40          -   28.51105      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.82915    0   38          -   28.82915      -     -    0s
+     0     0   28.89942    0   39          -   28.89942      -     -    0s
+     0     0   28.89942    0   40          -   28.89942      -     -    0s
+     0     0   28.89942    0   41          -   28.89942      -     -    0s
+     0     0   28.89942    0   42          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   37          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     2   29.54950    0   36          -   29.54950      -     -    0s
+ 27570 17866   33.19104   33   14          -   32.38257      -   6.9    5s
+ 61775 37048   38.32423   44   17          -   33.02329      -   7.6   10s
+ 96704 55107 infeasible   43               -   33.38752      -   7.8   15s
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 05:03:04 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 211 rows, 224 columns and 1106 nonzeros
+Model fingerprint: 0xd8c57cca
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 1 rows and 28 columns
+Presolve time: 0.01s
+Presolved: 210 rows, 196 columns, 910 nonzeros
+Variable types: 0 continuous, 196 integer (182 binary)
+
+Root relaxation: objective 2.692687e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.92687    0   20          -   26.92687      -     -    0s
+     0     0   28.46015    0   28          -   28.46015      -     -    0s
+     0     0   28.51105    0   40          -   28.51105      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.82915    0   38          -   28.82915      -     -    0s
+     0     0   28.89942    0   39          -   28.89942      -     -    0s
+     0     0   28.89942    0   40          -   28.89942      -     -    0s
+     0     0   28.89942    0   41          -   28.89942      -     -    0s
+     0     0   28.89942    0   42          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   37          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     2   29.54950    0   36          -   29.54950      -     -    0s
+ 23267 15331   36.76073   35   12          -   32.27705      -   6.8    5s
+ 46119 28549   33.52151   32   28          -   32.82044      -   7.5   10s
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 05:03:44 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 05:05:43 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+
+Gurobi 10.0.2 (linux64, .NET) logging started Thu 17 Aug 2023 05:37:55 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1002_2.log"
+Set parameter TimeLimit to value 6000
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 214 rows, 224 columns and 1119 nonzeros
+Model fingerprint: 0x2a349f8d
+Variable types: 0 continuous, 224 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 4 rows and 28 columns
+Presolve time: 0.00s
+Presolved: 210 rows, 196 columns, 910 nonzeros
+Variable types: 0 continuous, 196 integer (182 binary)
+
+Root relaxation: objective 2.692687e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.92687    0   20          -   26.92687      -     -    0s
+     0     0   28.46015    0   28          -   28.46015      -     -    0s
+     0     0   28.51105    0   40          -   28.51105      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.52971    0   42          -   28.52971      -     -    0s
+     0     0   28.82915    0   38          -   28.82915      -     -    0s
+     0     0   28.89942    0   39          -   28.89942      -     -    0s
+     0     0   28.89942    0   40          -   28.89942      -     -    0s
+     0     0   28.89942    0   41          -   28.89942      -     -    0s
+     0     0   28.89942    0   42          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   44          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     0   28.89942    0   35          -   28.89942      -     -    0s
+     0     0   28.89942    0   37          -   28.89942      -     -    0s
+     0     0   28.89942    0   36          -   28.89942      -     -    0s
+     0     2   29.54950    0   36          -   29.54950      -     -    0s
+ 18447 12413   32.31842   27   14          -   32.11173      -   7.0    5s
+ 47911 29506 infeasible   39               -   32.85261      -   7.5   10s
+ 71391 42321   38.70114   45   13          -   33.12603      -   7.4   15s
+ 92195 52830   42.78717   47    9          -   33.33810      -   7.8   20s
+ 116183 64468   41.25270   36   18          -   33.54954      -   8.1   25s
+ 141571 76731   42.90253   41   18          -   33.71815      -   8.3   30s
+ 164631 87604 infeasible   51               -   33.84030      -   8.5   35s
+ 189747 100152   35.25057   30   24          -   33.96455      -   8.4   40s
+ 213414 112080   44.30796   41   10          -   34.05076      -   8.2   45s
+ 235779 122108   35.62543   39   20          -   34.12416      -   8.3   50s
+ 260137 132879   36.79824   35   11          -   34.21347      -   8.4   55s
+ 284045 143471   35.15755   23   11          -   34.30612      -   8.6   60s
+ 305821 152791   48.47289   47   12          -   34.38050      -   8.7   65s
+ 327715 162302   42.05552   45    8          -   34.44938      -   8.8   70s
+ 345145 169796   36.98544   33   11          -   34.50030      -   8.8   75s
+ 362725 177173   38.80915   37    7          -   34.55192      -   8.9   80s
