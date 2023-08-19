@@ -36,7 +36,8 @@ namespace Optimizer.Model {
                     if (nodeI.Id != nodeJ.Id)
                         expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
 
-                instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_node_" + nodeI.Id);
+                //instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_node_" + nodeI.Id);
+                instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
             }
         }
 
@@ -50,8 +51,8 @@ namespace Optimizer.Model {
 
                 foreach (Node nodeJ in instance.Nodes)
                 {
-                    expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
-                    expr.AddTerm(-1.0, instance.X[nodeJ.Id, nodeI.Id]);
+                    expr.AddTerm(1.0, instance.X[nodeJ.Id, nodeI.Id]);
+                    expr.AddTerm(-1.0, instance.X[nodeI.Id, nodeJ.Id]);
                 }
 
                 instance.Model.AddConstr(expr, GRB.EQUAL, 0.0, "arc_entering_depot_" + nodeI.Id);
@@ -77,14 +78,25 @@ namespace Optimizer.Model {
         {
             GRBLinExpr expr = new();
 
+            // foreach (Node nodeI in instance.Nodes)
+            //     foreach (Node nodeJ in instance.Nodes)
+            //         if (nodeI.Id != nodeJ.Id)
+            //             instance.Model.AddConstr(
+            //                 instance.U[nodeI.Id] - instance.U[nodeJ.Id] + (instance.Nodes.Count * instance.X[nodeI.Id, nodeJ.Id]),
+            //                 GRB.LESS_EQUAL,
+            //                 instance.Nodes.Count - 1,
+            //                 $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}"
+            //             );
+
             foreach (Node nodeI in instance.Nodes)
                 foreach (Node nodeJ in instance.Nodes)
                     if (nodeI.Id != nodeJ.Id)
                         instance.Model.AddConstr(
-                            instance.U[nodeI.Id] - instance.U[nodeJ.Id] + (instance.Nodes.Count * instance.X[nodeI.Id, nodeJ.Id]),
+                            instance.U[nodeI.Id] + ((instance.Nodes.Count + 1) * instance.X[nodeI.Id, nodeJ.Id]) - (instance.Nodes.Count + 1) + 1,
                             GRB.LESS_EQUAL,
-                            instance.Nodes.Count - 1,
-                            $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}");
+                            instance.U[nodeJ.Id],
+                            $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}"
+                        );
         }
     }
 }

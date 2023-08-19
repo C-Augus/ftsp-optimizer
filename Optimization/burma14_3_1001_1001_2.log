@@ -171,3 +171,28 @@ Solution count 0
 
 Model is infeasible
 Best objective -, best bound -, gap -
+
+Gurobi 10.0.2 (linux64, .NET) logging started Fri 18 Aug 2023 07:56:07 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+
+Gurobi 10.0.2 (linux64, .NET) logging started Fri 18 Aug 2023 08:08:29 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+
+Gurobi 10.0.2 (linux64, .NET) logging started Fri 18 Aug 2023 08:10:48 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+
+Gurobi 10.0.2 (linux64, .NET) logging started Fri 18 Aug 2023 08:14:27 PM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000
+
+Gurobi 10.0.2 (linux64, .NET) logging started Sat 19 Aug 2023 10:13:10 AM -03
+
+Set parameter LogFile to value "burma14_3_1001_1001_2.log"
+Set parameter TimeLimit to value 6000

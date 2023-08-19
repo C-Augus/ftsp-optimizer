@@ -40,15 +40,12 @@ namespace Optimizer.Model
 
                 model.Update();
 
+                // foreach (Gurobi.GRBConstr constr in model.GetConstrs())
+                //     System.Console.WriteLine(constr.ConstrName);
+
                 Stopwatch stopwatch = Stopwatch.StartNew();
                 model.Optimize();
                 stopwatch.Stop();
-
-                foreach (Node nodeI in instance.Nodes)
-                    foreach (Node nodeJ in instance.Nodes)
-                        Console.WriteLine(x[nodeI.Id, nodeJ.Id]);
-
-                //GRBVar.
                 
                 Console.WriteLine("Obj: " + model.ObjVal);
                 Console.WriteLine("Stopwatch: " + stopwatch.Elapsed);
