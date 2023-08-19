@@ -6,11 +6,11 @@ namespace Optimizer.Main
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //string[] tspFiles = Directory.GetFiles(DirectoryImporter.SelectDirectory(), "*.tsp");
 
-            string[] tspFiles = Directory.GetFiles(StringExtensions.ImportDirectory(), "*.tsp");
+            string[] tspFiles = Directory.GetFiles(DirectoryExtensions.ImportDirectory(), "*.tsp");
 
             if (tspFiles.Length == 0)
             {

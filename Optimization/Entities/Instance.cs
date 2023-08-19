@@ -1,3 +1,4 @@
+using ExtensionMethods;
 using Gurobi;
 
 namespace Optimizer.Entities {
@@ -7,6 +8,7 @@ namespace Optimizer.Entities {
         public string? Type { get; set; }
         public int? Dimension { get; set; }
         public string? EdgeWeightType { get; set; }
+        public string? LogDirectoryPath { get; set; } = DirectoryExtensions.LogDirectory();
         public int? NumberOfFamilies { get; set; }
         public int? NumberOfVisits { get; set; }
         public List<Family>? Families { get; set; } = new List<Family>();

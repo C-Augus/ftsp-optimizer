@@ -22,6 +22,7 @@ namespace Optimizer.Model {
                 expr.AddTerm(1.0, instance.X[0, nodeJ.Id]);
 
             instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_depot");
+            instance.Model.Update();
         }
 
         public static void Constraint2(ref TSPInstance instance)
@@ -38,6 +39,7 @@ namespace Optimizer.Model {
 
                 //instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_node_" + nodeI.Id);
                 instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
+                instance.Model.Update();
             }
         }
 
@@ -56,6 +58,7 @@ namespace Optimizer.Model {
                 }
 
                 instance.Model.AddConstr(expr, GRB.EQUAL, 0.0, "arc_entering_depot_" + nodeI.Id);
+                instance.Model.Update();
             }
         }
 
@@ -72,6 +75,7 @@ namespace Optimizer.Model {
 
                 instance.Model.AddConstr(expr, GRB.EQUAL, family.NumberOfVisits, "visits_on_family_" + family.Id);
             }
+            instance.Model.Update();
         }
 
         public static void Constraint5(ref TSPInstance instance)
@@ -97,6 +101,7 @@ namespace Optimizer.Model {
                             instance.U[nodeJ.Id],
                             $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}"
                         );
+            instance.Model.Update();
         }
     }
 }

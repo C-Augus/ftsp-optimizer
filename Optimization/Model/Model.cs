@@ -36,19 +36,13 @@ namespace Optimizer.Model
 
                 GurobiConstraints.SetGurobiConstraints(ref instance);
                 
-                model.Parameters.TimeLimit = 6000.00;
-
-                model.Update();
-
-                // foreach (Gurobi.GRBConstr constr in model.GetConstrs())
-                //     System.Console.WriteLine(constr.ConstrName);
-
-                Stopwatch stopwatch = Stopwatch.StartNew();
+                //model.Parameters.TimeLimit = 6000.00;
+                model.Parameters.TimeLimit = 30.00;
+                model.Parameters.LogFile = instance.LogDirectoryPath;
+                
                 model.Optimize();
-                stopwatch.Stop();
                 
                 Console.WriteLine("Obj: " + model.ObjVal);
-                Console.WriteLine("Stopwatch: " + stopwatch.Elapsed);
 
                 model.Dispose();
                 env.Dispose();

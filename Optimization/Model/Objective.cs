@@ -19,6 +19,7 @@ namespace Optimizer.Model
                     objective.AddTerm(DistanceCalculator.DistanceBetween(nodeI, nodeJ), instance.X[nodeI.Id, nodeJ.Id]);
 
             instance.Model.SetObjective(objective, GRB.MINIMIZE);
+            instance.Model.Update();
         }
     }
 }
