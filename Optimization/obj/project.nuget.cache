@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "qLMhm4ZW+Tn4/CxoG0/9lHajMIUMHNPZHetY7MFCCWJxBIi1QW7y8z8nofHgb03LYv9UXT4VaYYNDmdoTcYLug==",
+  "dgSpecHash": "q+eTmTP74rfJIMpGgyLIhRxA81N2aavo/7eQGyT+KRG4USNZKevzT18I4R/AnToxHs+WZlvboA/DfZMA2+R6Rw==",
   "success": true,
   "projectFilePath": "/home/ciro/Documents/ftsp-optimizer/Optimization/Optimizer.csproj",
   "expectedPackageFiles": [
-    "/home/ciro/.nuget/packages/gurobi.optimizer/10.0.2/gurobi.optimizer.10.0.2.nupkg.sha512"
+    "/home/ciro/.nuget/packages/atksharp/3.24.24.95/atksharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/cairosharp/3.24.24.95/cairosharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/gdksharp/3.24.24.95/gdksharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/giosharp/3.24.24.95/giosharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/glibsharp/3.24.24.95/glibsharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/gtksharp/3.24.24.95/gtksharp.3.24.24.95.nupkg.sha512",
+    "/home/ciro/.nuget/packages/gurobi.optimizer/10.0.2/gurobi.optimizer.10.0.2.nupkg.sha512",
+    "/home/ciro/.nuget/packages/pangosharp/3.24.24.95/pangosharp.3.24.24.95.nupkg.sha512"
   ],
   "logs": []
 }

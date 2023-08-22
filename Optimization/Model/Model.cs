@@ -6,42 +6,45 @@ namespace Optimizer.Model
 {
     public static class GurobiModel
     {
-        public static /*GRBModel*/ void ExecuteGurobiModel()
+        public static void ExecuteGurobiModel(string filePath)
         {
             try
             {
+                TSPInstance instance = InstanceImporter.ReadInstanceFromFile(filePath);
+                instance.Solution = "Gurobi Mathematical Model Solver";
+
                 // Create new Gurobi environment
                 GRBEnv env = new(true);
-                env.Set("LogFile", "ftsp.log");
                 env.Start();
 
                 // Create empty model
                 GRBModel model = new(env);
+                GRBVar[,] x = new GRBVar[instance.Nodes.Count, instance.Nodes.Count]; ;
+                GRBVar[] y = new GRBVar[instance.Nodes.Count];
+                GRBVar[] u = new GRBVar[instance.Nodes.Count];
 
-                TSPInstance instance = Instance.ReadInstanceFromFile();
+                instance.Model = model;
+                instance.X = x;
+                instance.Y = y;
+                instance.U = u;
 
-                // Create x binary variable matrix
-                GRBVar[,] x;
-                GRBVar[] y;
+                GurobiVariables.SetGurobiVariables(ref instance);
 
-                GurobiVariables.SetGurobiVariables(ref model, instance.NumberOfNodes, out x, out y);
+                GurobiObjective.SetGurobiObjective(ref instance);
 
-                GurobiObjective.SetGurobiObjective(ref model, ref instance, ref x);
-
-                GurobiConstraints.SetGurobiConstraints(ref model, ref instance, instance.NumberOfNodes, ref x, ref y);
-
+                GurobiConstraints.SetGurobiConstraints(ref instance);
+                
                 model.Parameters.TimeLimit = 6000.00;
-
-                model.Update();
-
+                //model.Parameters.TimeLimit = 30.00;
+                model.Parameters.LogFile = instance.LogDirectoryPath + $"/{instance.Name}.log";
+                
+                //GRBModel.Write(/*nome*/);
                 model.Optimize();
-
+                
                 Console.WriteLine("Obj: " + model.ObjVal);
 
                 model.Dispose();
                 env.Dispose();
-
-                //return model;
             }
             catch (GRBException e)
             {

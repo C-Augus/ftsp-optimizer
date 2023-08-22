@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
     <PackageReference Include="Gurobi.Optimizer" Version="10.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Cache\" />
+    <Folder Include="Data\Instances\" />
   </ItemGroup>
 
 </Project>
