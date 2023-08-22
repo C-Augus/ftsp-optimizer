@@ -86,11 +86,11 @@ namespace Optimizer.Utils
         public static void LinkNodesToFamilies(ref TSPInstance instance, ref string[] lines)
         {
             int currentFamilyLine = 0;
-            int currentNode = 0;
+            int currentNode = 1;
 
             foreach(Family family in instance.Families)
             {
-                for (; currentNode < (family.NumberOfNodes + currentFamilyLine); currentNode++)
+                for (; currentNode <= (family.NumberOfNodes + currentFamilyLine); currentNode++)
                 {
                     instance.Nodes[currentNode].Family = family;
                     family.Nodes.Add(instance.Nodes[currentNode]);

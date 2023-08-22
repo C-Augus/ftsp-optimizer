@@ -1,7 +1,6 @@
 ﻿using Gurobi;
 using Optimizer.Entities;
 using Optimizer.Utils;
-using System.Diagnostics;
 
 namespace Optimizer.Model
 {
@@ -16,7 +15,6 @@ namespace Optimizer.Model
 
                 // Create new Gurobi environment
                 GRBEnv env = new(true);
-                env.Set("LogFile", $"{instance.Name}.log");
                 env.Start();
 
                 // Create empty model
@@ -36,10 +34,11 @@ namespace Optimizer.Model
 
                 GurobiConstraints.SetGurobiConstraints(ref instance);
                 
-                //model.Parameters.TimeLimit = 6000.00;
-                model.Parameters.TimeLimit = 30.00;
-                model.Parameters.LogFile = instance.LogDirectoryPath;
+                model.Parameters.TimeLimit = 6000.00;
+                //model.Parameters.TimeLimit = 30.00;
+                model.Parameters.LogFile = instance.LogDirectoryPath + $"/{instance.Name}.log";
                 
+                //GRBModel.Write(/*nome*/);
                 model.Optimize();
                 
                 Console.WriteLine("Obj: " + model.ObjVal);

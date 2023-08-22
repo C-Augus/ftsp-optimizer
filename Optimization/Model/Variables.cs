@@ -15,7 +15,7 @@ namespace Optimizer.Model {
 
                 instance.Y[nodeI.Id] = instance.Model.AddVar(0.0, GRB.INFINITY, 0.0, GRB.BINARY, $"y_{nodeI.Id}");
 
-                instance.U[nodeI.Id] = instance.Model.AddVar(0.0, instance.Nodes.Count, 0.0, GRB.INTEGER, $"u_{nodeI.Id}");
+                instance.U[nodeI.Id] = instance.Model.AddVar(0.0, instance.Nodes.Count, 0.0, GRB.CONTINUOUS, $"u_{nodeI.Id}");
 
                 instance.Model.Update();
             }

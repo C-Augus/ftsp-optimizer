@@ -19,7 +19,8 @@ namespace Optimizer.Model {
             GRBLinExpr expr = new();
 
             foreach (Node nodeJ in instance.Nodes)
-                expr.AddTerm(1.0, instance.X[0, nodeJ.Id]);
+                if (nodeJ.Id != 0)
+                    expr.AddTerm(1.0, instance.X[0, nodeJ.Id]);
 
             instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_depot");
             instance.Model.Update();
@@ -31,15 +32,18 @@ namespace Optimizer.Model {
 
             foreach (Node nodeI in instance.Nodes)
             {
-                expr.Clear();
+                if (nodeI.Id != 0)
+                {
+                    expr.Clear();
 
-                foreach (Node nodeJ in instance.Nodes)
-                    if (nodeI.Id != nodeJ.Id)
-                        expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
+                    foreach (Node nodeJ in instance.Nodes)
+                        if (nodeI.Id != nodeJ.Id)
+                            expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
 
-                //instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_node_" + nodeI.Id);
-                instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
-                instance.Model.Update();
+                    //instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_node_" + nodeI.Id);
+                    instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
+                    instance.Model.Update();
+                }
             }
         }
 
@@ -82,25 +86,26 @@ namespace Optimizer.Model {
         {
             GRBLinExpr expr = new();
 
-            // foreach (Node nodeI in instance.Nodes)
-            //     foreach (Node nodeJ in instance.Nodes)
-            //         if (nodeI.Id != nodeJ.Id)
-            //             instance.Model.AddConstr(
-            //                 instance.U[nodeI.Id] - instance.U[nodeJ.Id] + (instance.Nodes.Count * instance.X[nodeI.Id, nodeJ.Id]),
-            //                 GRB.LESS_EQUAL,
-            //                 instance.Nodes.Count - 1,
-            //                 $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}"
-            //             );
-
-            foreach (Node nodeI in instance.Nodes)
+            /*foreach (Node nodeI in instance.Nodes)
                 foreach (Node nodeJ in instance.Nodes)
-                    if (nodeI.Id != nodeJ.Id)
+                    if ((nodeI.Id != nodeJ.Id) && (nodeI.Id != 0) && (nodeJ.Id != 0))
                         instance.Model.AddConstr(
                             instance.U[nodeI.Id] + ((instance.Nodes.Count + 1) * instance.X[nodeI.Id, nodeJ.Id]) - (instance.Nodes.Count + 1) + 1,
                             GRB.LESS_EQUAL,
                             instance.U[nodeJ.Id],
                             $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}"
-                        );
+                        );*/
+            foreach (Node nodeI in instance.Nodes)
+            {
+                foreach (Node nodeJ in instance.Nodes)
+                {
+                    if ((nodeI.Id != nodeJ.Id) && (nodeI.Id != 0) && (nodeJ.Id != 0))
+                    {
+                        instance.Model.AddConstr(instance.U[nodeI.Id] + ((instance.Nodes.Count + 1) * instance.X[nodeI.Id, nodeJ.Id]) - (instance.Nodes.Count + 1) + 1, GRB.LESS_EQUAL, instance.U[nodeJ.Id], $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}");
+                    }
+                }
+            }
+
             instance.Model.Update();
         }
     }
