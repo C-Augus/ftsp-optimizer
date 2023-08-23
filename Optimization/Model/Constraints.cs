@@ -9,8 +9,9 @@ namespace Optimizer.Model {
             GRBLinExpr expr = new();
 
             foreach (Node nodeJ in instance.Nodes)
-                if (nodeJ.Id != 0)
                     expr.AddTerm(1.0, instance.X[0, nodeJ.Id]);
+
+            expr.Remove(0); // The set here doesn't include subset {0}
 
             instance.Model.AddConstr(expr, GRB.EQUAL, 1.0, "arc_leaves_depot");
 
@@ -23,17 +24,16 @@ namespace Optimizer.Model {
 
             foreach (Node nodeI in instance.Nodes)
             {
-                if (nodeI.Id != 0)
-                {
-                    expr.Clear();
+                expr.Clear();
 
-                    foreach (Node nodeJ in instance.Nodes)
-                        if (nodeI.Id != nodeJ.Id)
-                            expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
+                foreach (Node nodeJ in instance.Nodes)
+                    if (nodeI.Id != nodeJ.Id)
+                        expr.AddTerm(1.0, instance.X[nodeI.Id, nodeJ.Id]);
 
-                    instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
-                }
+                instance.Model.AddConstr(expr, GRB.EQUAL, instance.Y[nodeI.Id], "arc_leaves_node_" + nodeI.Id);
             }
+
+            expr.Remove(0); // The set here doesn't include subset {0}
 
             instance.Model.Update();
         }
@@ -77,19 +77,11 @@ namespace Optimizer.Model {
 
         public static void Constraint5(ref TSPInstance instance)
         {
-            GRBLinExpr expr = new();
-
-            foreach (Node nodeI in instance.Nodes)
-            {
-                foreach (Node nodeJ in instance.Nodes)
-                {
-                    if ((nodeI.Id != nodeJ.Id) && (nodeI.Id != 0) && (nodeJ.Id != 0))
-                    {
-                        instance.Model.AddConstr(instance.U[nodeI.Id] + ((instance.Nodes.Count + 1) * instance.X[nodeI.Id, nodeJ.Id]) - (instance.Nodes.Count + 1) + 1, GRB.LESS_EQUAL, instance.U[nodeJ.Id], $"subtour_elimination_{nodeI.Id}_{nodeJ.Id}");
-                    }
-                }
-            }
-
+            for (int nodeI = 1; nodeI < instance.Nodes.Count; nodeI++)
+                for (int nodeJ = 1; nodeJ < instance.Nodes.Count; nodeJ++)
+                    if (nodeI != nodeJ)
+                        instance.Model.AddConstr(instance.U[nodeI] + ((instance.Nodes.Count + 1) * instance.X[nodeI, nodeJ]) - (instance.Nodes.Count + 1) + 1, GRB.LESS_EQUAL, instance.U[nodeJ], $"subtour_elimination_{nodeI}_{nodeJ}");
+                    
             instance.Model.Update();
         }
     }

@@ -1639,3 +1639,353 @@ Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64) logging started Wed Aug 23 14:30:07 2023
+
+Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 188 rows, 224 columns and 1054 nonzeros
+Model fingerprint: 0x16aa470f
+Variable types: 14 continuous, 210 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 3 rows and 24 columns
+Presolve time: 0.01s
+Presolved: 185 rows, 200 columns, 1820 nonzeros
+Variable types: 13 continuous, 187 integer (187 binary)
+Found heuristic solution: objective 49.8462253
+
+Root relaxation: objective 2.119251e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   21.19251    0   22   49.84623   21.19251  57.5%     -    0s
+H    0     0                      29.6313536   21.19251  28.5%     -    0s
+     0     0   24.30384    0   24   29.63135   24.30384  18.0%     -    0s
+     0     0   24.42477    0   23   29.63135   24.42477  17.6%     -    0s
+     0     0   24.60952    0   22   29.63135   24.60952  16.9%     -    0s
+H    0     0                      29.4818738   24.60952  16.5%     -    0s
+     0     0   24.60952    0   23   29.48187   24.60952  16.5%     -    0s
+H    0     0                      29.4005715   24.60952  16.3%     -    0s
+     0     0   24.60952    0   23   29.40057   24.60952  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     2   24.64598    0   28   29.40057   24.64598  16.2%     -    0s
+H   32    35                      28.6527119   24.72092  13.7%   6.1    0s
+*   60    51              26      28.3968034   24.72092  12.9%   4.6    0s
+*  129   109              32      27.2819614   24.78922  9.14%   4.5    0s
+H  139   120                      27.1691576   24.78922  8.76%   4.9    0s
+*  294   144               8      26.4943456   24.86817  6.14%   5.0    0s
+*  423   118              14      26.1810005   24.91244  4.85%   5.2    0s
+*  442   107               8      25.6684676   24.96884  2.73%   5.3    0s
+*  606    66               9      25.6561937   25.34748  1.20%   5.7    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Cover: 1
+  Implied bound: 14
+  Clique: 2
+  MIR: 19
+  Inf proof: 1
+  Zero half: 4
+  RLT: 5
+  Relax-and-lift: 14
+
+Explored 686 nodes (3902 simplex iterations) in 0.30 seconds (0.14 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64) logging started Wed Aug 23 14:43:00 2023
+
+Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 188 rows, 224 columns and 1054 nonzeros
+Model fingerprint: 0x16aa470f
+Variable types: 14 continuous, 210 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 3 rows and 24 columns
+Presolve time: 0.01s
+Presolved: 185 rows, 200 columns, 1820 nonzeros
+Variable types: 13 continuous, 187 integer (187 binary)
+Found heuristic solution: objective 49.8462253
+
+Root relaxation: objective 2.119251e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   21.19251    0   22   49.84623   21.19251  57.5%     -    0s
+H    0     0                      29.6313536   21.19251  28.5%     -    0s
+     0     0   24.30384    0   24   29.63135   24.30384  18.0%     -    0s
+     0     0   24.42477    0   23   29.63135   24.42477  17.6%     -    0s
+     0     0   24.60952    0   22   29.63135   24.60952  16.9%     -    0s
+H    0     0                      29.4818738   24.60952  16.5%     -    0s
+     0     0   24.60952    0   23   29.48187   24.60952  16.5%     -    0s
+H    0     0                      29.4005715   24.60952  16.3%     -    0s
+     0     0   24.60952    0   23   29.40057   24.60952  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     2   24.64598    0   28   29.40057   24.64598  16.2%     -    0s
+H   32    35                      28.6527119   24.72092  13.7%   6.1    0s
+*   60    51              26      28.3968034   24.72092  12.9%   4.6    0s
+*  129   109              32      27.2819614   24.78922  9.14%   4.5    0s
+H  139   120                      27.1691576   24.78922  8.76%   4.9    0s
+*  294   144               8      26.4943456   24.86817  6.14%   5.0    0s
+*  423   118              14      26.1810005   24.91244  4.85%   5.2    0s
+*  442   107               8      25.6684676   24.96884  2.73%   5.3    0s
+*  606    66               9      25.6561937   25.34748  1.20%   5.7    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Cover: 1
+  Implied bound: 14
+  Clique: 2
+  MIR: 19
+  Inf proof: 1
+  Zero half: 4
+  RLT: 5
+  Relax-and-lift: 14
+
+Explored 686 nodes (3902 simplex iterations) in 0.49 seconds (0.14 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64) logging started Wed Aug 23 14:43:25 2023
+
+Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 188 rows, 224 columns and 1054 nonzeros
+Model fingerprint: 0x16aa470f
+Variable types: 14 continuous, 210 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 3 rows and 24 columns
+Presolve time: 0.01s
+Presolved: 185 rows, 200 columns, 1820 nonzeros
+Variable types: 13 continuous, 187 integer (187 binary)
+Found heuristic solution: objective 49.8462253
+
+Root relaxation: objective 2.119251e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   21.19251    0   22   49.84623   21.19251  57.5%     -    0s
+H    0     0                      29.6313536   21.19251  28.5%     -    0s
+     0     0   24.30384    0   24   29.63135   24.30384  18.0%     -    0s
+     0     0   24.42477    0   23   29.63135   24.42477  17.6%     -    0s
+     0     0   24.60952    0   22   29.63135   24.60952  16.9%     -    0s
+H    0     0                      29.4818738   24.60952  16.5%     -    0s
+     0     0   24.60952    0   23   29.48187   24.60952  16.5%     -    0s
+H    0     0                      29.4005715   24.60952  16.3%     -    0s
+     0     0   24.60952    0   23   29.40057   24.60952  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     2   24.64598    0   28   29.40057   24.64598  16.2%     -    0s
+H   32    35                      28.6527119   24.72092  13.7%   6.1    0s
+*   60    51              26      28.3968034   24.72092  12.9%   4.6    0s
+*  129   109              32      27.2819614   24.78922  9.14%   4.5    0s
+H  139   120                      27.1691576   24.78922  8.76%   4.9    0s
+*  294   144               8      26.4943456   24.86817  6.14%   5.0    0s
+*  423   118              14      26.1810005   24.91244  4.85%   5.2    0s
+*  442   107               8      25.6684676   24.96884  2.73%   5.3    0s
+*  606    66               9      25.6561937   25.34748  1.20%   5.7    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Cover: 1
+  Implied bound: 14
+  Clique: 2
+  MIR: 19
+  Inf proof: 1
+  Zero half: 4
+  RLT: 5
+  Relax-and-lift: 14
+
+Explored 686 nodes (3902 simplex iterations) in 0.58 seconds (0.14 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64) logging started Wed Aug 23 14:43:42 2023
+
+Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 188 rows, 224 columns and 1054 nonzeros
+Model fingerprint: 0x16aa470f
+Variable types: 14 continuous, 210 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 3 rows and 24 columns
+Presolve time: 0.01s
+Presolved: 185 rows, 200 columns, 1820 nonzeros
+Variable types: 13 continuous, 187 integer (187 binary)
+Found heuristic solution: objective 49.8462253
+
+Root relaxation: objective 2.119251e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   21.19251    0   22   49.84623   21.19251  57.5%     -    0s
+H    0     0                      29.6313536   21.19251  28.5%     -    0s
+     0     0   24.30384    0   24   29.63135   24.30384  18.0%     -    0s
+     0     0   24.42477    0   23   29.63135   24.42477  17.6%     -    0s
+     0     0   24.60952    0   22   29.63135   24.60952  16.9%     -    0s
+H    0     0                      29.4818738   24.60952  16.5%     -    0s
+     0     0   24.60952    0   23   29.48187   24.60952  16.5%     -    0s
+H    0     0                      29.4005715   24.60952  16.3%     -    0s
+     0     0   24.60952    0   23   29.40057   24.60952  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     2   24.64598    0   28   29.40057   24.64598  16.2%     -    0s
+H   32    35                      28.6527119   24.72092  13.7%   6.1    0s
+*   60    51              26      28.3968034   24.72092  12.9%   4.6    0s
+*  129   109              32      27.2819614   24.78922  9.14%   4.5    0s
+H  139   120                      27.1691576   24.78922  8.76%   4.9    0s
+*  294   144               8      26.4943456   24.86817  6.14%   5.0    0s
+*  423   118              14      26.1810005   24.91244  4.85%   5.2    0s
+*  442   107               8      25.6684676   24.96884  2.73%   5.3    0s
+*  606    66               9      25.6561937   25.34748  1.20%   5.7    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Cover: 1
+  Implied bound: 14
+  Clique: 2
+  MIR: 19
+  Inf proof: 1
+  Zero half: 4
+  RLT: 5
+  Relax-and-lift: 14
+
+Explored 686 nodes (3902 simplex iterations) in 0.45 seconds (0.14 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%
+
+Gurobi 10.0.2 (linux64) logging started Wed Aug 23 14:43:54 2023
+
+Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
+Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, instruction set [SSE2]
+Thread count: 2 physical cores, 2 logical processors, using up to 2 threads
+
+Optimize a model with 188 rows, 224 columns and 1054 nonzeros
+Model fingerprint: 0x16aa470f
+Variable types: 14 continuous, 210 integer (210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [2e-01, 1e+01]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 3 rows and 24 columns
+Presolve time: 0.00s
+Presolved: 185 rows, 200 columns, 1820 nonzeros
+Variable types: 13 continuous, 187 integer (187 binary)
+Found heuristic solution: objective 49.8462253
+
+Root relaxation: objective 2.119251e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   21.19251    0   22   49.84623   21.19251  57.5%     -    0s
+H    0     0                      29.6313536   21.19251  28.5%     -    0s
+     0     0   24.30384    0   24   29.63135   24.30384  18.0%     -    0s
+     0     0   24.42477    0   23   29.63135   24.42477  17.6%     -    0s
+     0     0   24.60952    0   22   29.63135   24.60952  16.9%     -    0s
+H    0     0                      29.4818738   24.60952  16.5%     -    0s
+     0     0   24.60952    0   23   29.48187   24.60952  16.5%     -    0s
+H    0     0                      29.4005715   24.60952  16.3%     -    0s
+     0     0   24.60952    0   23   29.40057   24.60952  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   29   29.40057   24.61091  16.3%     -    0s
+     0     0   24.61091    0   28   29.40057   24.61091  16.3%     -    0s
+     0     2   24.64598    0   28   29.40057   24.64598  16.2%     -    0s
+H   32    35                      28.6527119   24.72092  13.7%   6.1    0s
+*   60    51              26      28.3968034   24.72092  12.9%   4.6    0s
+*  129   109              32      27.2819614   24.78922  9.14%   4.5    0s
+H  139   120                      27.1691576   24.78922  8.76%   4.9    0s
+*  294   144               8      26.4943456   24.86817  6.14%   5.0    0s
+*  423   118              14      26.1810005   24.91244  4.85%   5.2    0s
+*  442   107               8      25.6684676   24.96884  2.73%   5.3    0s
+*  606    66               9      25.6561937   25.34748  1.20%   5.7    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Cover: 1
+  Implied bound: 14
+  Clique: 2
+  MIR: 19
+  Inf proof: 1
+  Zero half: 4
+  RLT: 5
+  Relax-and-lift: 14
+
+Explored 686 nodes (3902 simplex iterations) in 0.78 seconds (0.14 work units)
+Thread count was 2 (of 2 available processors)
+
+Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.565619370326e+01, best bound 2.565619370326e+01, gap 0.0000%

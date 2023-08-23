@@ -1,4 +1,5 @@
-﻿using Optimizer.Entities;
+﻿using ExtensionMethods;
+using Optimizer.Entities;
 
 namespace Optimizer.Utils
 {
@@ -8,7 +9,9 @@ namespace Optimizer.Utils
         {
             instance.Model.Parameters.TimeLimit = 6000.00;
 
-            instance.Model.Parameters.LogFile = instance.LogDirectoryPath + $"/{instance.Name}.log";
+            // instance.Model.Parameters.LogFile = instance.LogDirectoryPath + $"/{instance.Name}.log";
+
+            instance.Model.Parameters.LogFile = DirectoryExtensions.LogDirectory() + $"/{instance.Name}.log";
         }
     }
 }

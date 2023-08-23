@@ -21,8 +21,6 @@ namespace Optimizer.Model
                 // Creates an empty model
                 instance.Model = new GRBModel(env);
 
-                //GRBModel.Write(/*nome*/);
-
                 CGD.ProcessInstance(ref instance);
 
                 instance.Model.Optimize();

@@ -1,5 +1,5 @@
-using Optimizer.Entities;
 using Optimizer.Delegates;
+using Optimizer.Entities;
 
 namespace Optimizer.Utils
 {

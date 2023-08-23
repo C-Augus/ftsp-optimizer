@@ -16,8 +16,8 @@ namespace Optimizer.Entities {
         public float? Gap { get; set; }
         public int? NumberOfFamilies { get; set; }
         public int? NumberOfVisits { get; set; }
-        public List<Family>? Families { get; set; } /*= new List<Family>();*/
-        public List<Node>? Nodes { get; set; } /*= new List<Node>();*/
+        public List<Family>? Families { get; set; } = new List<Family>();
+        public List<Node>? Nodes { get; set; } = new List<Node>();
         public GRBModel Model { get; set; }
         public GRBVar[,] X { get; set; }
         public GRBVar[] Y { get; set; }
