@@ -1,6 +1,6 @@
 ﻿namespace Optimizer
 {
-    internal class GlobalUsings
+    class GlobalUsings
     {
     }
 }

@@ -18,15 +18,9 @@ namespace Optimizer.Utils
                     case string when lines[line].StartsWith("TYPE"):
                         instance.Type = StringHelper.ParseValue(lines[line]);
                         break;
-                    //case string when lines[line].StartsWith("COMMENT"):
-                    //    instance.Comment = StringHelper.ParseValue(lines[line]);
-                    //    break;
                     case string when lines[line].StartsWith("DIMENSION"):
                         instance.Dimension = int.Parse(StringHelper.ParseValue(lines[line]));
                         break;
-                    //case string when lines[line].StartsWith("EDGE_WEIGHT_TYPE"):
-                    //    instance.EdgeWeightType = StringHelper.ParseValue(lines[line]);
-                    //    break;
                     default:
                         break;
                 }

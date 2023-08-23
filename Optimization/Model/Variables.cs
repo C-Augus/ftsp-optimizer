@@ -4,8 +4,8 @@ using Optimizer.Entities;
 namespace Optimizer.Model {
     public static class GurobiVariables
     {
-        // Creates an empty binary matrix of variables (x) and an empty binary array (y). <- deprecated
-        // Then, it fills them with proper decision variables to send them back to the model's call.
+        // Creates an empty binary matrix of variables (X), an empty binary array (Y) and a empty continuous array (U).
+        // Then, it fills them with their respective decision variables.
         public static void SetGurobiVariables(ref TSPInstance instance)
         {
             instance.X = new GRBVar[instance.Nodes.Count, instance.Nodes.Count]; ;
