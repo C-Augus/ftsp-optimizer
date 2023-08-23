@@ -1,5 +1,4 @@
-﻿//using ExtensionMethods;
-using Optimizer.Entities;
+﻿using Optimizer.Entities;
 
 namespace Optimizer.Utils
 {

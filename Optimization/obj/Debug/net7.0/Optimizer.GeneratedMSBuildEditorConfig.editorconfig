@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Optimizer
-build_property.ProjectDir = /home/ciro/Documents/ftsp-optimizer/Optimization/
+build_property.ProjectDir = C:\code\ftsp-optimizer\Optimization\
