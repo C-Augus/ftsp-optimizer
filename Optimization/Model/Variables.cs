@@ -8,6 +8,10 @@ namespace Optimizer.Model {
         // Then, it fills them with proper decision variables to send them back to the model's call.
         public static void SetGurobiVariables(ref TSPInstance instance)
         {
+            instance.X = new GRBVar[instance.Nodes.Count, instance.Nodes.Count]; ;
+            instance.Y = new GRBVar[instance.Nodes.Count];
+            instance.U = new GRBVar[instance.Nodes.Count];
+
             foreach (Node nodeI in instance.Nodes)
             {
                 foreach (Node nodeJ in instance.Nodes)
@@ -17,8 +21,9 @@ namespace Optimizer.Model {
 
                 instance.U[nodeI.Id] = instance.Model.AddVar(0.0, instance.Nodes.Count, 0.0, GRB.CONTINUOUS, $"u_{nodeI.Id}");
 
-                instance.Model.Update();
             }
+
+            instance.Model.Update();
         }
     }
 }

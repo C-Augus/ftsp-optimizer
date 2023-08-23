@@ -1,5 +1,5 @@
 using Optimizer.Entities;
-using static Optimizer.Utils.InstanceHelper;
+using Optimizer.Delegates;
 
 namespace Optimizer.Utils
 {
@@ -11,7 +11,7 @@ namespace Optimizer.Utils
 
             TSPInstance instance = new(DateTime.Now);
 
-            ProcessInstance(ref instance, ref lines);
+            CustomGurobiDelegates.ImportInstance(ref instance, ref lines);
 
             return instance;
         }
