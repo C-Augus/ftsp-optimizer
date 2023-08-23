@@ -1,6 +1,6 @@
 ﻿using Optimizer.Model;
 using Optimizer.Utils;
-//using ExtensionMethods;
+// using ExtensionMethods;
 
 namespace Optimizer.Main
 {

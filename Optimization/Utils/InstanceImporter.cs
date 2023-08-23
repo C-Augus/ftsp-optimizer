@@ -9,7 +9,7 @@ namespace Optimizer.Utils
         {
             string[] lines = StringHelper.ReadAllLines(filePath);
 
-            TSPInstance instance = new(/*DateTime.Now*/);
+            TSPInstance instance = new(filePath);
 
             CustomGurobiDelegates.ImportInstance(ref instance, ref lines);
 

@@ -43,5 +43,10 @@ namespace Optimizer.Utils
 
             return newLines;
         }
+
+        public static string FindLogDirectoryPath(string filePath)
+        {
+            return filePath.Substring(0, filePath.IndexOf("Instances")) + "Logs/";
+        }
     }
 }
