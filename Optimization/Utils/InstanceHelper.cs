@@ -1,19 +1,9 @@
-﻿using Gurobi;
-using Optimizer.Delegates;
-using Optimizer.Entities;
+﻿using Optimizer.Entities;
 
 namespace Optimizer.Utils
 {
     public abstract class InstanceHelper
     {
-        // Delegate of method chaining, responsible for processing all methods listed on InstanceHelper in the following order.
-        public static ProcessInstanceMethods ProcessInstance =
-            new ProcessInstanceMethods(FindFileHeaderValues)
-            + FindFamilies
-            + FindNodes
-            + LinkNodesToFamilies
-            + FindFamiliesAndVisits;
-
         // Searches the selected values based on their tags inside a given file. As each of 
         // them is found, it will assign the value to the instance object's respective property.
         public static void FindFileHeaderValues(ref TSPInstance instance, ref string[] lines)
@@ -28,14 +18,8 @@ namespace Optimizer.Utils
                     case string when lines[line].StartsWith("TYPE"):
                         instance.Type = StringHelper.ParseValue(lines[line]);
                         break;
-                    case string when lines[line].StartsWith("COMMENT"):
-                        instance.Comment = StringHelper.ParseValue(lines[line]);
-                        break;
                     case string when lines[line].StartsWith("DIMENSION"):
                         instance.Dimension = int.Parse(StringHelper.ParseValue(lines[line]));
-                        break;
-                    case string when lines[line].StartsWith("EDGE_WEIGHT_TYPE"):
-                        instance.EdgeWeightType = StringHelper.ParseValue(lines[line]);
                         break;
                     default:
                         break;

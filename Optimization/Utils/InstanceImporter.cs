@@ -1,5 +1,5 @@
+using Optimizer.Delegates;
 using Optimizer.Entities;
-using static Optimizer.Utils.InstanceHelper;
 
 namespace Optimizer.Utils
 {
@@ -9,9 +9,9 @@ namespace Optimizer.Utils
         {
             string[] lines = StringHelper.ReadAllLines(filePath);
 
-            TSPInstance instance = new(DateTime.Now);
+            TSPInstance instance = new(filePath);
 
-            ProcessInstance(ref instance, ref lines);
+            CustomGurobiDelegates.ImportInstance(ref instance, ref lines);
 
             return instance;
         }

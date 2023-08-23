@@ -1,0 +1,6 @@
+﻿namespace Optimizer
+{
+    class GlobalUsings
+    {
+    }
+}

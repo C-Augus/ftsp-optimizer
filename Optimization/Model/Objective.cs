@@ -1,6 +1,6 @@
 using Gurobi;
 using Optimizer.Entities;
-using Optimizer.Utils;
+using DC = Optimizer.Utils.DistanceCalculator;
 
 namespace Optimizer.Model
 {
@@ -10,15 +10,14 @@ namespace Optimizer.Model
         // Once done, sets the model objective.
         public static void SetGurobiObjective(ref TSPInstance instance)
         {
-            instance.Model.Update();
-
             GRBLinExpr objective = new();
 
             foreach (Node nodeI in instance.Nodes)
                 foreach (Node nodeJ in instance.Nodes)
-                    objective.AddTerm(DistanceCalculator.DistanceBetween(nodeI, nodeJ), instance.X[nodeI.Id, nodeJ.Id]);
+                    objective.AddTerm(DC.DistanceBetween(nodeI, nodeJ), instance.X[nodeI.Id, nodeJ.Id]);
 
             instance.Model.SetObjective(objective, GRB.MINIMIZE);
+
             instance.Model.Update();
         }
     }

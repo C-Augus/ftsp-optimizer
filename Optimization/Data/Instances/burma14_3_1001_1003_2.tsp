@@ -26,6 +26,3 @@ FAMILY_SECTION
 5 1
 4 1
 EOF
-
-
-
