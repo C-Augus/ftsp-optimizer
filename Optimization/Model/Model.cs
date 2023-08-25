@@ -12,7 +12,9 @@ namespace Optimizer.Model
             try
             {
                 TSPInstance instance = InstanceImporter.ReadInstanceFromFile(filePath);
-                instance.Solution = "Gurobi Mathematical Model Solver";
+                instance.Solution = "GRB";
+
+                ResultPrinter.ExportInstanceData(ref instance);
 
                 // Creates new Gurobi environment and starts it.
                 GRBEnv env = new(true);
