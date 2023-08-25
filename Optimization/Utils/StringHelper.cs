@@ -23,14 +23,10 @@ namespace Optimizer.Utils
             return line.Substring(line.IndexOf(":") + 2).Trim();
         }
 
-        public static string ReplaceSpacesWithUnderscores(string line)
-        {
-            return line.Replace(" ", "_");
-        }
-
         public static string[] ReadAllLines(string filePath)
         {
             int nonEmptyLines = 0;
+            int currentLine = 0;
 
             string[] originalLines = File.ReadAllLines(filePath);
 
@@ -38,8 +34,12 @@ namespace Optimizer.Utils
 
             string[] newLines = new string[nonEmptyLines];
 
-            for (int line = 0; line < nonEmptyLines; line++)
-                newLines[line] = originalLines[line];
+            foreach (string line in originalLines)
+                if (!string.IsNullOrEmpty(line))
+                {
+                    newLines[currentLine] = line;
+                    currentLine++;
+                }
 
             return newLines;
         }
