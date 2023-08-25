@@ -1,6 +1,5 @@
 ﻿using Optimizer.Model;
 using Optimizer.Utils;
-// using ExtensionMethods;
 
 namespace Optimizer.Main
 {
@@ -9,8 +8,6 @@ namespace Optimizer.Main
         static async Task Main(string[] args)
         {
             string[] tspFiles = Directory.GetFiles(DirectoryImporter.SelectDirectory(), "*.tsp");
-
-            //string[] tspFiles = Directory.GetFiles(DirectoryExtensions.ImportDirectory(), "*.tsp");
 
             if (tspFiles.Length == 0)
             {

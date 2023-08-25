@@ -1,8 +1,9 @@
-using Gurobi;
+﻿using Gurobi;
 using Optimizer.Entities;
 
-namespace Optimizer.Model {
-    public static class GurobiConstraints 
+namespace Optimizer.Model
+{
+    public static class GurobiConstraints
     {
         // Constraint 1: There must be exactly one arc leaving the depot.
         public static void Constraint1(ref TSPInstance instance)
@@ -57,7 +58,7 @@ namespace Optimizer.Model {
 
                 instance.Model.AddConstr(expr, GRB.EQUAL, 0.0, "arc_entering_depot_" + nodeI.Id);
             }
-            
+
             instance.Model.Update();
         }
 
@@ -86,12 +87,12 @@ namespace Optimizer.Model {
                 for (int nodeJ = 1; nodeJ < instance.Nodes.Count; nodeJ++)
                     if (nodeI != nodeJ)
                         instance.Model.AddConstr(
-                            instance.U[nodeI] + ((instance.Nodes.Count + 1) * instance.X[nodeI, nodeJ]) - (instance.Nodes.Count + 1) + 1, 
-                            GRB.LESS_EQUAL, 
-                            instance.U[nodeJ], 
+                            instance.U[nodeI] + ((instance.Nodes.Count + 1) * instance.X[nodeI, nodeJ]) - (instance.Nodes.Count + 1) + 1,
+                            GRB.LESS_EQUAL,
+                            instance.U[nodeJ],
                             $"subtour_elimination_{nodeI}_{nodeJ}"
                         );
-                    
+
             instance.Model.Update();
         }
     }

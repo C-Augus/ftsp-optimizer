@@ -18,7 +18,6 @@ namespace Optimizer.Utils
 
             selectedFolder = folderDialog.Filename;
 
-            
             folderDialog.Destroy();
             
             Application.Quit();
