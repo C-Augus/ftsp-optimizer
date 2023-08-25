@@ -14,7 +14,6 @@ namespace Optimizer.Model
                 TSPInstance instance = InstanceImporter.ReadInstanceFromFile(filePath);
                 instance.Solution = "GRB";
 
-                ResultPrinter.ExportInstanceData(ref instance);
 
                 // Creates new Gurobi environment and starts it.
                 GRBEnv env = new(true);
@@ -26,6 +25,9 @@ namespace Optimizer.Model
                 CGD.ProcessInstance(ref instance);
 
                 instance.Model.Optimize();
+
+                InstanceHelper.PostProcessData(ref instance);
+                ResultPrinter.ExportInstanceData(ref instance);
 
                 instance.Model.Dispose();
                 env.Dispose();

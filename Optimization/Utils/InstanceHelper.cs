@@ -95,5 +95,14 @@ namespace Optimizer.Utils
             instance.NumberOfFamilies = int.Parse(auxiliaryString[0]);
             instance.NumberOfVisits = int.Parse(auxiliaryString[1]);
         }
+
+        public static void PostProcessData(ref TSPInstance instance)
+        {
+            instance.ElapsedTime = instance.Model.Runtime;
+            instance.ObjVal = instance.Model.ObjVal;
+            instance.LowerBound = instance.Model.MinBound;
+            instance.UpperBound = instance.Model.MaxBound;
+            instance.Gap = instance.Model.MIPGap;
+        }
     }
 }

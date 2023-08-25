@@ -9,10 +9,11 @@ namespace Optimizer.Entities {
         public DateTime Date { get; set; }
         public string? Solution { get; set; }
         public string LogDirectoryPath { get; set; }
-        public float? ElapsedTime { get; set; }
-        public float? UpperBound { get; set; }
-        public float? LowerBound { get; set; }
-        public float? Gap { get; set; }
+        public double ElapsedTime { get; set; }
+        public double ObjVal { get; set; }
+        public double UpperBound { get; set; }
+        public double LowerBound { get; set; }
+        public double Gap { get; set; }
         public int? NumberOfFamilies { get; set; }
         public int? NumberOfVisits { get; set; }
         public List<Family> Families { get; set; }
