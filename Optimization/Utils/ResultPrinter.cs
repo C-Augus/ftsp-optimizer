@@ -6,7 +6,7 @@ namespace Optimizer.Utils
     {
         public static void ExportInstanceData(ref TSPInstance instance)
         {
-            string formattedLine = string.Format($"{instance.Name,-25} | {instance.Dimension,9} | {instance.NumberOfFamilies, 3} | {instance.Solution, -8} |{instance.Date, 31} | {instance.ElapsedTime} | {instance.UpperBound} | {instance.LowerBound} | {instance.Gap}");
+            string formattedLine = string.Format($"{instance.Name, -25} | {instance.Dimension, 3} | {instance.NumberOfFamilies, 3} | {instance.Solution, -3} |{instance.Date, 23} | {instance.ElapsedTime, 20} | {instance.UpperBound} | {instance.LowerBound} | {instance.Gap}");
 
             using (StreamWriter writer = new (instance.LogDirectoryPath + "generalLogs" + ".log", true))
             {
