@@ -1,4 +1,4 @@
-NAME: burma14_3_1001_1001_2
+NAME: burma14_3_1001_1002_2
 TYPE: TSP
 COMMENT: 14-Staedte in Burma (Zaw Win)
 DIMENSION: 14
@@ -21,8 +21,11 @@ NODE_COORD_SECTION
   13  19.41       97.13
   14  20.09       94.55
 FAMILY_SECTION
-3 6
-4 2
+3 10
+4 4
 5 2
-4 2
+4 4
 EOF
+
+
+

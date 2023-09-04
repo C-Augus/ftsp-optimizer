@@ -1,5 +1,5 @@
 
-Gurobi 10.0.2 (linux64) logging started Wed 23 Aug 2023 04:19:41 PM -03
+Gurobi 10.0.2 (linux64) logging started Tue 29 Aug 2023 07:07:23 PM -03
 
 Set parameter LogFile to value "/home/ciro/Documents/ftsp-optimizer/Optimization/Data/Logs/burma14_3_1001_1002_2.log"
 Gurobi Optimizer version 10.0.2 build v10.0.2rc0 (linux64)
@@ -61,7 +61,7 @@ Cutting planes:
   RLT: 5
   Relax-and-lift: 14
 
-Explored 686 nodes (3902 simplex iterations) in 0.37 seconds (0.14 work units)
+Explored 686 nodes (3902 simplex iterations) in 0.45 seconds (0.14 work units)
 Thread count was 2 (of 2 available processors)
 
 Solution count 10: 25.6562 25.6685 26.181 ... 29.4819
