@@ -8,8 +8,8 @@ namespace Optimizer.Delegates
 {
     public delegate void GurobiModelingMethods(ref GurobiTSPInstance instance);
     
-    // Class resposible for holding the delegates of method chaining.
-    public abstract class CustomGurobiDelegates : CustomDelegates
+    // Class responsible for holding the delegates of method chaining.
+    public abstract class CustomGurobiDelegates : CustomCommonDelegates
     {
         // Processes all methods listed on Model/GurobiConstraints in the following order.
         public static GurobiModelingMethods SetGurobiConstraints =

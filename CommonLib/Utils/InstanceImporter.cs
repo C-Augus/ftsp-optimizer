@@ -11,7 +11,7 @@ namespace CommonLib.Utils
 
             TSPInstance instance = new(filePath);
 
-            CustomDelegates.ImportInstance(ref instance, ref lines);
+            CustomCommonDelegates.ImportInstance(ref instance, ref lines);
 
             return instance;
         }

@@ -13,11 +13,25 @@ namespace Optimizer.Entities {
 
         public GurobiTSPInstance(string filePath) : base(filePath)
         {
-            //Families = new List<Family>();
-            //Nodes = new List<Node>();
-            //Date = DateTime.Now;
+            Solution = "GRB";
 
-            //LogDirectoryPath = StringHelper.FindLogDirectoryPath(filePath);
+            Env = new GRBEnv();
+            Env.Start();
+
+            Model = new GRBModel(Env);
+        }
+
+        public GurobiTSPInstance(string filePath, TSPInstance baseInstance) : base(filePath)
+        {
+            Name = baseInstance.Name;
+            Type = baseInstance.Type;
+            Dimension = baseInstance.Dimension;
+            Date = baseInstance.Date;
+            LogDirectoryPath = baseInstance.LogDirectoryPath;
+            NumberOfFamilies = baseInstance.NumberOfFamilies;
+            NumberOfVisits = baseInstance.NumberOfVisits;
+            Families = baseInstance.Families;
+            Nodes = baseInstance.Nodes;
 
             Solution = "GRB";
 

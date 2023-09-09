@@ -1,5 +1,6 @@
 ﻿//using Optimizer.Model;
 using CommonLib.Utils;
+using CommonLib.Entities;
 using Optimizer.Entities;
 using Gurobi;
 
@@ -23,8 +24,9 @@ namespace GurobiOptimizer
 
                 try
                 {
-                    GurobiTSPInstance instance = (GurobiTSPInstance)InstanceImporter.ReadInstanceFromFile(tspFile);
-                    instance.ProcessInstance(ref instance);
+                    TSPInstance baseInstance = InstanceImporter.ReadInstanceFromFile(tspFile);
+                    GurobiTSPInstance gurobiInstance = new(tspFile, baseInstance);
+                    gurobiInstance.ProcessInstance(ref gurobiInstance);
                 }
                 catch (GRBException e)
                 {
