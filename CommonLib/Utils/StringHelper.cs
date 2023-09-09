@@ -1,6 +1,6 @@
-﻿using Optimizer.Entities;
+﻿using CommonLib.Entities;
 
-namespace Optimizer.Utils
+namespace CommonLib.Utils
 {
     public abstract class StringHelper
     {

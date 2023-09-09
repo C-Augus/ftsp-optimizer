@@ -1,7 +1,7 @@
-﻿using Gurobi;
-using CGD = Optimizer.Delegates.CustomGurobiDelegates;
+﻿using CommonLib.Utils;
+using Gurobi;
 using Optimizer.Entities;
-using Optimizer.Utils;
+using Optimizer.Delegates;
 
 namespace Optimizer.Model
 {
@@ -11,26 +11,27 @@ namespace Optimizer.Model
         {
             try
             {
-                TSPInstance instance = InstanceImporter.ReadInstanceFromFile(filePath);
-                instance.Solution = "GRB";
-
+                GurobiTSPInstance instance = (GurobiTSPInstance)InstanceImporter.ReadInstanceFromFile(filePath);
 
                 // Creates new Gurobi environment and starts it.
-                GRBEnv env = new(true);
-                env.Start();
+                //GRBEnv env = new(true);
+                //env.Start();
 
-                // Creates an empty model
-                instance.Model = new GRBModel(env);
+                //// Creates an empty model
+                //instance.Model = new GRBModel(env);
 
-                CGD.ProcessInstance(ref instance);
+                //CustomGurobiDelegates.ProcessInstance(ref instance);
 
-                instance.Model.Optimize();
+                //instance.Model.Optimize();
 
-                InstanceHelper.PostProcessData(ref instance);
-                ResultPrinter.ExportInstanceData(ref instance);
+                //InstanceHelper.PostProcessData(ref instance);
+                //ResultPrinter.ExportInstanceData(ref instance);
 
-                instance.Model.Dispose();
-                env.Dispose();
+                //instance.PostProcessData();
+                //instance.ExportData();
+
+                //instance.Model.Dispose();
+                //instance.Env.Dispose();
             }
             catch (GRBException e)
             {

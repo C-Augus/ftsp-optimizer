@@ -1,7 +1,7 @@
-using Optimizer.Delegates;
-using Optimizer.Entities;
+using CommonLib.Delegates;
+using CommonLib.Entities;
 
-namespace Optimizer.Utils
+namespace CommonLib.Utils
 {
     public class InstanceImporter
     {
@@ -11,7 +11,7 @@ namespace Optimizer.Utils
 
             TSPInstance instance = new(filePath);
 
-            CustomGurobiDelegates.ImportInstance(ref instance, ref lines);
+            CustomDelegates.ImportInstance(ref instance, ref lines);
 
             return instance;
         }

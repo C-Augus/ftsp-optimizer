@@ -4,7 +4,7 @@ namespace Optimizer.Utils
 {
     public abstract class ParameterSetter
     {
-        public static void SetParameters(ref TSPInstance instance)
+        public static void SetParameters(ref GurobiTSPInstance instance)
         {
             instance.Model.Parameters.TimeLimit = 6000.00;
 

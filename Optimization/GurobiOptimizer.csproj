@@ -16,4 +16,8 @@
     <Folder Include="Data\Cache\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj" />
+  </ItemGroup>
+
 </Project>

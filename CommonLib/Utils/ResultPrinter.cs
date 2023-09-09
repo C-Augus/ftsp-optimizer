@@ -1,8 +1,8 @@
-﻿using Optimizer.Entities;
+﻿using CommonLib.Entities;
 
-namespace Optimizer.Utils
+namespace CommonLib.Utils
 {
-    abstract class ResultPrinter
+    public abstract class ResultPrinter
     {
         public static void ExportInstanceData(ref TSPInstance instance)
         {

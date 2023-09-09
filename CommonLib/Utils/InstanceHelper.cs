@@ -1,6 +1,6 @@
-﻿using Optimizer.Entities;
+﻿using CommonLib.Entities;
 
-namespace Optimizer.Utils
+namespace CommonLib.Utils
 {
     public abstract class InstanceHelper
     {
@@ -96,13 +96,13 @@ namespace Optimizer.Utils
             instance.NumberOfVisits = int.Parse(auxiliaryString[1]);
         }
 
-        public static void PostProcessData(ref TSPInstance instance)
-        {
-            instance.ElapsedTime = instance.Model.Runtime;
-            instance.ObjVal = instance.Model.ObjVal;
-            instance.LowerBound = instance.Model.MinBound;
-            instance.UpperBound = instance.Model.MaxBound;
-            instance.Gap = instance.Model.MIPGap;
-        }
+        //public static void PostProcessData(ref TSPInstance instance)
+        //{
+        //    instance.ElapsedTime = instance.Model.Runtime;
+        //    instance.ObjVal = instance.Model.ObjVal;
+        //    instance.LowerBound = instance.Model.MinBound;
+        //    instance.UpperBound = instance.Model.MaxBound;
+        //    instance.Gap = instance.Model.MIPGap;
+        //}
     }
 }

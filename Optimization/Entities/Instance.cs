@@ -1,35 +1,54 @@
+using CommonLib.Entities;
 using Gurobi;
-using Optimizer.Utils;
+using CommonLib.Utils;
+using Optimizer.Delegates;
 
 namespace Optimizer.Entities {
-    public class TSPInstance {
-        public string? Name { get; set; }
-        public string? Type { get; set; }
-        public int? Dimension { get; set; }
-        public DateTime Date { get; set; }
-        public string? Solution { get; set; }
-        public string LogDirectoryPath { get; set; }
-        public double ElapsedTime { get; set; }
-        public double ObjVal { get; set; }
-        public double UpperBound { get; set; }
-        public double LowerBound { get; set; }
-        public double Gap { get; set; }
-        public int? NumberOfFamilies { get; set; }
-        public int? NumberOfVisits { get; set; }
-        public List<Family> Families { get; set; }
-        public List<Node> Nodes { get; set; }
-        public string? NodesOrder { get; set; }
+    public class GurobiTSPInstance : TSPInstance {
+        public GRBEnv Env { get; set; }
         public GRBModel Model { get; set; }
         public GRBVar[,] X { get; set; }
         public GRBVar[] Y { get; set; }
         public GRBVar[] U { get; set; }
 
-        public TSPInstance(string filePath)
+        public GurobiTSPInstance(string filePath) : base(filePath)
         {
-            LogDirectoryPath = StringHelper.FindLogDirectoryPath(filePath);
-            Families = new List<Family>();
-            Nodes = new List<Node>();
-            Date = DateTime.Now;
+            //Families = new List<Family>();
+            //Nodes = new List<Node>();
+            //Date = DateTime.Now;
+
+            //LogDirectoryPath = StringHelper.FindLogDirectoryPath(filePath);
+
+            Solution = "GRB";
+
+            Env = new GRBEnv();
+            Env.Start();
+
+            Model = new GRBModel(Env);
+        }
+
+        public void ProcessInstance(ref GurobiTSPInstance instance)
+        {
+            CustomGurobiDelegates.ProcessInstance(ref instance);
+
+            Model.Optimize();
+        }
+
+        public override void PostProcessData()
+        {
+            ElapsedTime = Model.Runtime;
+            ObjVal = Model.ObjVal;
+            LowerBound = Model.MinBound;
+            UpperBound = Model.MaxBound;
+            Gap = Model.MIPGap;
+
+            ExportData();
+        }
+
+        public void Dispose()
+        {
+            Model.Dispose();
+            Env.Dispose();
         }
     }
 }

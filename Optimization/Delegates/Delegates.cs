@@ -1,27 +1,16 @@
 ﻿using Optimizer.Entities;
 using Optimizer.Utils;
 using Optimizer.Model;
+using CommonLib.Delegates;
 using GC = Optimizer.Model.GurobiConstraints;
-using IH = Optimizer.Utils.InstanceHelper;
 
 namespace Optimizer.Delegates
 {
-    public delegate void InstanceHelperMethods(ref TSPInstance instance, ref string[] lines);
-
-    public delegate void GurobiModelingMethods(ref TSPInstance instance);
+    public delegate void GurobiModelingMethods(ref GurobiTSPInstance instance);
     
     // Class resposible for holding the delegates of method chaining.
-    public abstract class CustomGurobiDelegates
+    public abstract class CustomGurobiDelegates : CustomDelegates
     {
-        // Processes all methods listed on Utils/InstanceHelper in the following order.
-        public static InstanceHelperMethods ImportInstance =
-            new InstanceHelperMethods(IH.FindFileHeaderValues)
-            + IH.FindFamilies
-            + IH.FindNodes
-            + IH.LinkNodesToFamilies
-            + IH.FindFamiliesAndVisits
-            ;
-
         // Processes all methods listed on Model/GurobiConstraints in the following order.
         public static GurobiModelingMethods SetGurobiConstraints =
             new GurobiModelingMethods(GC.Constraint1)
