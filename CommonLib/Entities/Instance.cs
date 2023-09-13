@@ -27,10 +27,7 @@ namespace CommonLib.Entities {
             Date = DateTime.Now;
         }
 
-        public virtual void  PostProcessData()
-        {
-
-        }
+        public virtual void  PostProcessData() { }
 
         public void ExportData()
         {

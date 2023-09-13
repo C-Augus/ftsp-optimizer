@@ -1,5 +1,4 @@
-﻿//using Optimizer.Model;
-using CommonLib.Utils;
+﻿using CommonLib.Utils;
 using CommonLib.Entities;
 using Optimizer.Entities;
 using Gurobi;
@@ -8,7 +7,7 @@ namespace GurobiOptimizer
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             string[] tspFiles = Directory.GetFiles(DirectoryImporter.SelectDirectory(), "*.tsp");
 
@@ -32,7 +31,6 @@ namespace GurobiOptimizer
                 {
                     Console.WriteLine("Error code: " + e.ErrorCode + ". " + e.Message);
                 }
-                //GurobiModel.ExecuteGurobiModel(tspFile);
             }
         }
     }

@@ -1,6 +1,5 @@
 using CommonLib.Entities;
 using Gurobi;
-using CommonLib.Utils;
 using Optimizer.Delegates;
 
 namespace Optimizer.Entities {
@@ -10,16 +9,6 @@ namespace Optimizer.Entities {
         public GRBVar[,] X { get; set; }
         public GRBVar[] Y { get; set; }
         public GRBVar[] U { get; set; }
-
-        public GurobiTSPInstance(string filePath) : base(filePath)
-        {
-            Solution = "GRB";
-
-            Env = new GRBEnv();
-            Env.Start();
-
-            Model = new GRBModel(Env);
-        }
 
         public GurobiTSPInstance(string filePath, TSPInstance baseInstance) : base(filePath)
         {
@@ -41,9 +30,9 @@ namespace Optimizer.Entities {
             Model = new GRBModel(Env);
         }
 
-        public void ProcessInstance(ref GurobiTSPInstance instance)
+        public void ProcessInstance(ref GurobiTSPInstance gurobiInstance)
         {
-            CustomGurobiDelegates.ProcessInstance(ref instance);
+            CustomGurobiDelegates.ProcessInstance(ref gurobiInstance);
 
             Model.Optimize();
         }

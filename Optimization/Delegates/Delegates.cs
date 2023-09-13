@@ -13,11 +13,11 @@ namespace Optimizer.Delegates
     {
         // Processes all methods listed on Model/GurobiConstraints in the following order.
         public static GurobiModelingMethods SetGurobiConstraints =
-            new GurobiModelingMethods(GC.Constraint1)
-            + GC.Constraint2
-            + GC.Constraint3
-            + GC.Constraint4
-            + GC.Constraint5
+            new GurobiModelingMethods(GC.SetConstraint1)
+            + GC.SetConstraint2
+            + GC.SetConstraint3
+            + GC.SetConstraint4
+            + GC.SetConstraint5
             ;
 
         // Processes the methods listed in the following order.
