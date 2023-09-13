@@ -1,4 +1,4 @@
-namespace Optimizer.Entities
+namespace CommonLib.Entities
 {
     public class Node
     {
@@ -14,6 +14,4 @@ namespace Optimizer.Entities
             Y = y;
         }
     }
-
-
 }

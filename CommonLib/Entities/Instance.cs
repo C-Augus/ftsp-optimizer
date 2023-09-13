@@ -1,7 +1,6 @@
-using Gurobi;
-using Optimizer.Utils;
+using CommonLib.Utils;
 
-namespace Optimizer.Entities {
+namespace CommonLib.Entities {
     public class TSPInstance {
         public string? Name { get; set; }
         public string? Type { get; set; }
@@ -18,11 +17,7 @@ namespace Optimizer.Entities {
         public int? NumberOfVisits { get; set; }
         public List<Family> Families { get; set; }
         public List<Node> Nodes { get; set; }
-        public string? NodesOrder { get; set; }
-        public GRBModel Model { get; set; }
-        public GRBVar[,] X { get; set; }
-        public GRBVar[] Y { get; set; }
-        public GRBVar[] U { get; set; }
+        public Route FinalNodesOrder { get; set; }
 
         public TSPInstance(string filePath)
         {
@@ -30,6 +25,19 @@ namespace Optimizer.Entities {
             Families = new List<Family>();
             Nodes = new List<Node>();
             Date = DateTime.Now;
+        }
+
+        public virtual void  PostProcessData() { }
+
+        public void ExportData()
+        {
+            string formattedLine = string.Format($"{Name,-25} | {Dimension,3} | {NumberOfFamilies,3} | {Solution,-3} |{Date,23} | {ElapsedTime,20} | {UpperBound} | {LowerBound} | {Gap}");
+
+            using (StreamWriter writer = new(LogDirectoryPath + "generalLogs" + ".log", true))
+            {
+                writer.WriteLine(new string('-', formattedLine.Length));
+                writer.WriteLine(formattedLine);
+            }
         }
     }
 }

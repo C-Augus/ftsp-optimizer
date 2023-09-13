@@ -1,12 +1,13 @@
 using Gurobi;
 using Optimizer.Entities;
+using CommonLib.Entities;
 
 namespace Optimizer.Model {
     public static class GurobiVariables
     {
         // Creates an empty binary matrix of variables (X), an empty binary array (Y) and a empty continuous array (U).
         // Then, it fills them with their respective decision variables.
-        public static void SetGurobiVariables(ref TSPInstance instance)
+        public static void SetGurobiVariables(ref GurobiTSPInstance instance)
         {
             instance.X = new GRBVar[instance.Nodes.Count, instance.Nodes.Count]; ;
             instance.Y = new GRBVar[instance.Nodes.Count];

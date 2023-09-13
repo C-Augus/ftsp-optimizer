@@ -1,12 +1,13 @@
 ﻿using Gurobi;
 using Optimizer.Entities;
+using CommonLib.Entities;
 
 namespace Optimizer.Model
 {
     public static class GurobiConstraints
     {
         // Constraint 1: There must be exactly one arc leaving the depot.
-        public static void Constraint1(ref TSPInstance instance)
+        public static void SetConstraint1(ref GurobiTSPInstance instance)
         {
             GRBLinExpr expr = new();
 
@@ -21,7 +22,7 @@ namespace Optimizer.Model
         }
 
         // Constraint 2: If a node I is visited, there must be an arc leaving node I.
-        public static void Constraint2(ref TSPInstance instance)
+        public static void SetConstraint2(ref GurobiTSPInstance instance)
         {
             GRBLinExpr expr = new();
 
@@ -42,7 +43,7 @@ namespace Optimizer.Model
         }
 
         // Constraint 3: Together with Constraint1, guarantee there is an arc entering the depot.
-        public static void Constraint3(ref TSPInstance instance)
+        public static void SetConstraint3(ref GurobiTSPInstance instance)
         {
             GRBLinExpr expr = new();
 
@@ -63,7 +64,7 @@ namespace Optimizer.Model
         }
 
         // Constraint 4: guarantees the number of required visits per family.
-        public static void Constraint4(ref TSPInstance instance)
+        public static void SetConstraint4(ref GurobiTSPInstance instance)
         {
             GRBLinExpr expr = new();
 
@@ -81,7 +82,7 @@ namespace Optimizer.Model
         }
 
         // Constraint 5: MTZ elimination of subtours.
-        public static void Constraint5(ref TSPInstance instance)
+        public static void SetConstraint5(ref GurobiTSPInstance instance)
         {
             for (int nodeI = 1; nodeI < instance.Nodes.Count; nodeI++)
                 for (int nodeJ = 1; nodeJ < instance.Nodes.Count; nodeJ++)
