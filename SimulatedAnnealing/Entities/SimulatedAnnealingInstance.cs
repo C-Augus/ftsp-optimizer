@@ -28,9 +28,9 @@ namespace SimulatedAnnealing.Entities
             Solution = "SA";
         }
 
-        public double CalculateAcceptanceProbability(double currentCost, double newCost)
+        public double CalculateAcceptanceProbability(Route currentRoute, Route newRoute)
         {
-            return Math.Pow(Math.E, (RouteCostCalculator.CalculateRouteCost(currentCost) - RouteCostCalculator.CalculateRouteCost(newCost)) / InitialTemperature);
+            return Math.Pow(Math.E, (RouteCostCalculator.CalculateRouteCost(currentRoute) - RouteCostCalculator.CalculateRouteCost(newRoute)) / InitialTemperature);
         }
 
         public override void PostProcessData()
