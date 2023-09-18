@@ -1,17 +1,15 @@
 ﻿using CommonLib.Entities;
 using SimulatedAnnealing.Entities;
 using SimulatedAnnealing.Utils;
-using System;
 
 namespace SimulatedAnnealing
 {
-    class SimulatedAnnealingLoop
+    public abstract class SimulatedAnnealingLoop
     {
-        public void ProcessSA(SimulatedAnnealingInstance instance)
+        public static void ProcessSA(ref SimulatedAnnealingInstance instance)
         {
             // Initialize the current solution
             Route currentSolution = InitialRouteGenerator.InitializeSolution(instance);
-            double currentCost = RouteCostCalculator.CalculateRouteCost(currentSolution);
 
             for (int iteration = 0; iteration < instance.MaxIterations; iteration++)
             {
@@ -19,21 +17,28 @@ namespace SimulatedAnnealing
                 Route newSolution = NeighborSolutionGenerator.SwapNodes(currentSolution);
                 newSolution = NeighborSolutionGenerator.InsertionDeletion(newSolution);
 
-               // Calculate the objective value for the new solution
-               double newCost = RouteCostCalculator.CalculateRouteCost(newSolution);
+                //Console.Write("Current solution: ");
+                //foreach (Node node in currentSolution.VisitedNodes)
+                //    Console.Write(node.Id + " ");
+                //Console.Write(" | New solution: ");
+                //foreach (Node node in  newSolution.VisitedNodes)
+                //    Console.Write(node.Id + " ");
+
+                //Console.WriteLine("\n");
 
                 // Calculate acceptance probability and decide whether to accept the new solution
                 double acceptanceProbability = instance.CalculateAcceptanceProbability(currentSolution, newSolution);
 
-                if (new Random().NextDouble() < acceptanceProbability)
-                {
+                Console.WriteLine(acceptanceProbability);
+
+                if (new Random().NextDouble() <= acceptanceProbability)
                     currentSolution = newSolution;
-                    currentCost = newCost;
-                }
 
                 // Update temperature
                 instance.InitialTemperature *= instance.CoolingRate;
             }
+
+            Console.WriteLine("The best solution found is: " + RouteCostCalculator.CalculateRouteCost(currentSolution));
         }
     }
 }

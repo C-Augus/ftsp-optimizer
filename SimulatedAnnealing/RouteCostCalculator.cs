@@ -1,14 +1,12 @@
 ﻿using CommonLib.Entities;
 using CommonLib.Utils;
-using SimulatedAnnealing.Entities;
 
 namespace SimulatedAnnealing
 {
     public abstract class RouteCostCalculator
     {
-        public static double CalculateRouteCost(Route route/*, SimulatedAnnealingInstance instance*/)
+        public static double CalculateRouteCost(Route route)
         {
-
             double totalDistance = 0.0;
 
             // Calculate distance between locations in the order they are visited
@@ -20,20 +18,6 @@ namespace SimulatedAnnealing
             }
 
             return totalDistance;
-
-            //// Add distance from the last visited location back to the depot
-            //totalDistance += DistanceCalculator.DistanceBetween(route.VisitedNodes.Last(), depot);
-
-            // Calculate the penalty for not meeting minimum visit requirements
-            //double penalty = 0.0;
-            //foreach (var family in instance.Families)
-            //{
-            //    int actualVisits = route.VisitedNodes.Count(node => family.Nodes.Contains(node));
-            //    int visitsShortage = Math.Max(0, family.NumberOfVisits - actualVisits);
-            //    penalty += visitsShortage * instance.PenaltyFactor;
-            //}
-
-            //return totalDistance + penalty;
         }
     }
 }

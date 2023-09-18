@@ -4,26 +4,30 @@ namespace SimulatedAnnealing.Utils
 {
     abstract class NeighborSolutionGenerator
     {
-        public static Route SwapNodes(Route route)
+        public static Route SwapNodes(Route currentRoute)
         {
-            int index1 = new Random().Next(route.VisitedNodes.Count);
-            int index2 = new Random().Next(route.VisitedNodes.Count);
+            Route newRoute = (Route)currentRoute.Clone();
+
+            int index1 = new Random().Next(1, newRoute.VisitedNodes.Count - 1);
+            int index2 = new Random().Next(1, newRoute.VisitedNodes.Count - 1);
 
             while (index1 == index2)
-                index2 = new Random().Next(route.VisitedNodes.Count);
+                index2 = new Random().Next(1, newRoute.VisitedNodes.Count - 1);
 
-            Node temp = route.VisitedNodes[index1];
-            route.VisitedNodes[index1] = route.VisitedNodes[index2];
-            route.VisitedNodes[index2] = temp;
+            Node temp = newRoute.VisitedNodes[index1];
+            newRoute.VisitedNodes[index1] = newRoute.VisitedNodes[index2];
+            newRoute.VisitedNodes[index2] = temp;
 
-            return route;
+            return newRoute;
         }
 
-        public static Route InsertionDeletion(Route route)
+        public static Route InsertionDeletion(Route currentRoute)
         {
-            int indexOnRoute = new Random().Next(route.VisitedNodes.Count);
+            Route newRoute = (Route)currentRoute.Clone();
 
-            Node nodeToBeDeleted = route.VisitedNodes[indexOnRoute];
+            int indexOnRoute = new Random().Next(1, newRoute.VisitedNodes.Count - 1);
+
+            Node nodeToBeDeleted = newRoute.VisitedNodes[indexOnRoute];
 
             Family family = nodeToBeDeleted.Family;
 
@@ -34,9 +38,9 @@ namespace SimulatedAnnealing.Utils
             while (nodeToBeDeleted == nodeToBeInserted)
                 nodeToBeInserted = family.Nodes[new Random().Next(family.Nodes.Count)];
 
-            route.VisitedNodes[indexOnRoute] = nodeToBeInserted;
+            newRoute.VisitedNodes[indexOnRoute] = nodeToBeInserted;
 
-            return route;
+            return newRoute;
         }
     }
 }

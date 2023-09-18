@@ -1,4 +1,6 @@
 ﻿using CommonLib.Entities;
+using System.IO;
+using System.Net;
 
 namespace SimulatedAnnealing.Entities
 {
@@ -20,10 +22,10 @@ namespace SimulatedAnnealing.Entities
             Families = baseInstance.Families;
             Nodes = baseInstance.Nodes;
 
-            double InitialTemperature = 1000.0;
-            double CoolingRate = 0.995;
-            int MaxIterations = 10000;
-            double PenaltyFactor = 1000.0;
+            InitialTemperature = 1000.0;
+            CoolingRate = 0.995;
+            MaxIterations = 10000;
+            PenaltyFactor = 1000.0;
 
             Solution = "SA";
         }

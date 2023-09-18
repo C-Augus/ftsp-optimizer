@@ -1,5 +1,6 @@
 ﻿using CommonLib.Entities;
 using CommonLib.Utils;
+using SimulatedAnnealing;
 using SimulatedAnnealing.Entities;
 
 namespace GurobiOptimizer
@@ -24,7 +25,8 @@ namespace GurobiOptimizer
                 {
                     TSPInstance baseInstance = InstanceImporter.ReadInstanceFromFile(tspFile);
                     SimulatedAnnealingInstance SAInstance = new(tspFile, baseInstance);
-                    SAInstance.ProcessInstance(ref SAInstance);
+                    //for (int i = 0; i < 10; i++)
+                        SimulatedAnnealingLoop.ProcessSA(ref SAInstance);
                 }
                 catch (Exception ex)
                 {

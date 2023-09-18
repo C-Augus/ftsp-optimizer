@@ -12,12 +12,8 @@ namespace SimulatedAnnealing
             initialTour.Add(instance.Nodes[0]);
 
             foreach (var family in instance.Families)
-            {
                 for (int i = 0; i < family.NumberOfVisits; i++)
-                {
                     initialTour.Add(family.Nodes[i]);
-                }
-            }
 
             initialTour.Add(instance.Nodes[0]);
 
