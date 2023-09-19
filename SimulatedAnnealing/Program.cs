@@ -25,8 +25,7 @@ namespace GurobiOptimizer
                 {
                     TSPInstance baseInstance = InstanceImporter.ReadInstanceFromFile(tspFile);
                     SimulatedAnnealingInstance SAInstance = new(tspFile, baseInstance);
-                    //for (int i = 0; i < 10; i++)
-                        SimulatedAnnealingLoop.ProcessSA(ref SAInstance);
+                    SimulatedAnnealingLoop.ProcessSA(ref SAInstance);
                 }
                 catch (Exception ex)
                 {

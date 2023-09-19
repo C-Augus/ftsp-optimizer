@@ -1,6 +1,4 @@
 ﻿using CommonLib.Entities;
-using System.IO;
-using System.Net;
 
 namespace SimulatedAnnealing.Entities
 {
@@ -9,7 +7,6 @@ namespace SimulatedAnnealing.Entities
         public double InitialTemperature { get; set; }
         public double CoolingRate { get; set; }
         public int MaxIterations { get; set; }
-        public double PenaltyFactor { get; set; }
         public SimulatedAnnealingInstance(string filePath, TSPInstance baseInstance) : base(filePath)
         {
             Name = baseInstance.Name;
@@ -25,14 +22,13 @@ namespace SimulatedAnnealing.Entities
             InitialTemperature = 1000.0;
             CoolingRate = 0.995;
             MaxIterations = 10000;
-            PenaltyFactor = 1000.0;
 
             Solution = "SA";
         }
 
-        public double CalculateAcceptanceProbability(Route currentRoute, Route newRoute)
+        public double CalculateAcceptanceProbability(Route currentRoute, Route newSolution)
         {
-            return Math.Pow(Math.E, (RouteCostCalculator.CalculateRouteCost(currentRoute) - RouteCostCalculator.CalculateRouteCost(newRoute)) / InitialTemperature);
+            return Math.Pow(Math.E, -(RouteCostCalculator.CalculateRouteCost(newSolution) - RouteCostCalculator.CalculateRouteCost(currentRoute)) / InitialTemperature);
         }
 
         public override void PostProcessData()

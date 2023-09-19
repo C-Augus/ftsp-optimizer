@@ -1,4 +1,5 @@
 ﻿using CommonLib.Entities;
+using System.Collections.Generic;
 
 namespace SimulatedAnnealing.Utils
 {
@@ -35,7 +36,7 @@ namespace SimulatedAnnealing.Utils
 
             Node nodeToBeInserted = family.Nodes[indexOnFamily];
 
-            while (nodeToBeDeleted == nodeToBeInserted)
+            while (newRoute.VisitedNodes.Contains(nodeToBeInserted))
                 nodeToBeInserted = family.Nodes[new Random().Next(family.Nodes.Count)];
 
             newRoute.VisitedNodes[indexOnRoute] = nodeToBeInserted;
